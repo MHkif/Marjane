@@ -1,6 +1,9 @@
-package com.example.marjane.Entities;
+package com.marjane.Entities;
 import jakarta.persistence.*;
 import lombok.*;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 @Entity
@@ -20,8 +23,10 @@ public class SubCategory {
     private String name;
 
     @ManyToOne
-    @JoinColumn(name = "admin_id", referencedColumnName = "cin", nullable = false)
+    @JoinColumn(name = "admin_id", referencedColumnName = "CIN", nullable = false)
     private ProxyAdmin admin;
 
-    // Getter and setter methods
+    @OneToMany(mappedBy = "subCategory") // Define the OneToMany relationship
+    private List<Product> products = new ArrayList<>();
+
 }

@@ -1,10 +1,16 @@
-package com.example.marjane.Entities;
+package com.marjane.Entities;
 
+import com.marjane.Entities.Abstracts.Person;
 import jakarta.persistence.*;
 import lombok.*;
-@Entity
+
+@EqualsAndHashCode(callSuper = true)
+@AllArgsConstructor
+@NoArgsConstructor
 @Data
-public class ProxyAdmin {
+@Entity
+@Table(name = "proxiesAdmin")
+public class ProxyAdmin  extends Person{
 
     @Id
     @Column(name = "CIN", length = 255)
@@ -14,17 +20,4 @@ public class ProxyAdmin {
     @JoinColumn(name = "superAdmin_id", referencedColumnName = "CIN", nullable = false)
     private SuperAdmin superAdmin;
 
-    @Column(name = "email", length = 255, nullable = false)
-    private String email;
-
-    @Column(name = "password", length = 255, nullable = false)
-    private String password;
-
-    @Column(name = "firstName", length = 255, nullable = false)
-    private String firstName;
-
-    @Column(name = "lastName", length = 255, nullable = false)
-    private String lastName;
-
-    // Getter and setter methods
 }

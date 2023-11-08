@@ -1,4 +1,4 @@
-package com.example.marjane.Utils;
+package com.marjane.Utils;
 
 
 import org.hibernate.SessionFactory;

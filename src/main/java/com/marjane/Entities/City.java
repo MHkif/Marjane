@@ -1,9 +1,11 @@
-package com.example.marjane.Entities;
+package com.marjane.Entities;
 
 import jakarta.persistence.*;
 import lombok.*;
-@Entity
+@NoArgsConstructor
 @Data
+@Entity
+@Table(name = "cities")
 public class City {
 
     @Id
@@ -17,5 +19,4 @@ public class City {
     @Column(name = "country", length = 255, columnDefinition = "DEFAULT 'Morocco'")
     private String country;
 
-    // Getter and setter methods
 }

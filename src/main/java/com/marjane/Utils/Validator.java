@@ -1,4 +1,4 @@
-package com.example.marjane.Utils;
+package com.marjane.Utils;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

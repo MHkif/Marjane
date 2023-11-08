@@ -1,13 +1,19 @@
-package com.example.marjane.Entities;
+package com.marjane.Entities;
+import com.marjane.Entities.Abstracts.Promotion;
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.math.BigDecimal;
-import java.util.Date;
+import java.util.ArrayList;
+import java.util.List;
 
-@Entity
+
+@EqualsAndHashCode(callSuper = true)
+@NoArgsConstructor
+@AllArgsConstructor
 @Data
-public class ProductPromotion implements Promotion{
+@Entity
+@Table(name = "productPromotions")
+public class ProductPromotion extends Promotion {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -18,22 +24,9 @@ public class ProductPromotion implements Promotion{
     @JoinColumn(name = "product_id", nullable = false)
     private Product product;
 
-    @ManyToOne
-    @JoinColumn(name = "admin_id", referencedColumnName = "cin", nullable = false)
-    private ProxyAdmin admin;
-
-    @Column(name = "percentage", precision = 10, scale = 2)
-    private BigDecimal percentage;
-
-    @Column(name = "created_at")
-    private Date createdAt;
-
-    @Column(name = "start_at")
-    private Date startAt;
-
-    @Column(name = "end_at")
-    private Date endAt;
-
-    // Getter and setter methods
+    @OneToMany(mappedBy = "promotion")
+    private List<PromotionCenter> promotionCenters = new ArrayList<>();
 }
+
+
 

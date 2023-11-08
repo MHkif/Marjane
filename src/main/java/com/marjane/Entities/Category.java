@@ -1,9 +1,13 @@
-package com.example.marjane.Entities;
+package com.marjane.Entities;
 import jakarta.persistence.*;
 import lombok.*;
 
-@Entity
+import java.util.ArrayList;
+import java.util.List;
+
 @Data
+@Entity
+@Table(name = "categories")
 public class Category {
 
     @Id
@@ -15,8 +19,9 @@ public class Category {
     private String name;
 
     @ManyToOne
-    @JoinColumn(name = "admin_id", referencedColumnName = "cin", nullable = false)
+    @JoinColumn(name = "admin_id", referencedColumnName = "CIN", nullable = false)
     private ProxyAdmin admin;
 
-    // Getter and setter methods
+    @OneToMany(mappedBy = "category") // Means mapping by the corresponding column in Subcategory entity
+    private List<SubCategory> subCategories = new ArrayList<>();
 }

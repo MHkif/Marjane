@@ -1,4 +1,4 @@
-package com.example.marjane.Config;
+package com.marjane.Config;
 
 import jakarta.servlet.ServletContext;
 import jakarta.servlet.ServletException;

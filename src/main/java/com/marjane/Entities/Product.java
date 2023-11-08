@@ -1,11 +1,10 @@
-package com.example.marjane.Entities;
+package com.marjane.Entities;
 import jakarta.persistence.*;
 import lombok.*;
 
-
-
-@Entity
 @Data
+@Entity
+@Table(name = "products")
 public class Product {
 
     @Id
@@ -18,11 +17,12 @@ public class Product {
     private SubCategory subCategory;
 
     @ManyToOne
-    @JoinColumn(name = "admin_id", referencedColumnName = "cin", nullable = false)
+    @JoinColumn(name = "admin_id", referencedColumnName = "CIN", nullable = false)
     private ProxyAdmin admin;
 
     @Column(name = "name", length = 255, nullable = false)
     private String name;
 
-    // Getter and setter methods
+    @OneToOne(mappedBy = "product") // Define the OneToOne relationship
+    private Stock stock;
 }
