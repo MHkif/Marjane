@@ -22,6 +22,9 @@ public class Category {
     @JoinColumn(name = "admin_id", referencedColumnName = "CIN", nullable = false)
     private ProxyAdmin admin;
 
+
     @OneToMany(mappedBy = "category") // Means mapping by the corresponding column in Subcategory entity
     private List<SubCategory> subCategories = new ArrayList<>();
+
+
 }

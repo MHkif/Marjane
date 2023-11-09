@@ -1,15 +1,19 @@
 package com.marjane.Controllers;
 
+import com.marjane.DTOs.ProductPromotionDTO;
 import com.marjane.DTOs.Requests.PromotionRequest;
 import com.marjane.DTOs.Responses.ProductPromotionResponse;
 import com.marjane.DTOs.Responses.PromotionResponse;
 import com.marjane.Entities.*;
 import com.marjane.Entities.Abstracts.Promotion;
+import com.marjane.Services.Implementations.ProductPromServiceImpl;
 import com.marjane.Services.Implementations.ProductPromotionServiceImpl;
 import com.marjane.Services.Implementations.PromotionServiceImpl;
 import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -24,20 +28,20 @@ public class PromotionController {
     private PromotionServiceImpl<PromotionResponse<ProductPromotion>> productPromotionService;
     private PromotionServiceImpl<PromotionResponse<CategoryPromotion>> categoryPromotionService;
     private PromotionServiceImpl<PromotionResponse<SubCategoryPromotion>> subCategoryPromotionService;
-    private ProductPromotionServiceImpl service;
+    private ProductPromServiceImpl service;
 
     @Autowired
     public PromotionController(PromotionServiceImpl<PromotionResponse<ProductPromotion>> productPromotionService,
                                PromotionServiceImpl<PromotionResponse<CategoryPromotion>> categoryPromotionService,
                                PromotionServiceImpl<PromotionResponse<SubCategoryPromotion>> subCategoryPromotionService,
-                               ProductPromotionServiceImpl service) {
+                               ProductPromServiceImpl service) {
         this.productPromotionService = productPromotionService;
         this.categoryPromotionService = categoryPromotionService;
         this.subCategoryPromotionService = subCategoryPromotionService;
         this.service = service;
     }
 
-
+/*
     @PostMapping(value = "/create-promotion", produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
     public PromotionResponse<Promotion> createPromotion(@RequestBody PromotionRequest<ProductPromotion> request,  PromotionResponse<Promotion> promotion) {
@@ -56,20 +60,24 @@ public class PromotionController {
         return promotion;
     }
 
+
+ */
     @PostMapping(value = "/create-promotion/product", produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
-    public PromotionResponse<ProductPromotion> productPromotion(@RequestBody PromotionRequest<ProductPromotion> request, PromotionResponse<ProductPromotion> promotion) {
-        Optional<ProductPromotionResponse> productPromotion = service.save(request.getPromotion());
-        promotion.setPromotion(productPromotion.get().getPromotion());
+    public ResponseEntity<ProductPromotionDTO> productPromotion(@RequestBody ProductPromotionDTO request) {
+        ProductPromotionDTO promotion = service.save(request);
 
-
-        return promotion;
+        if (promotion != null) {
+            return new ResponseEntity<>(promotion, HttpStatus.OK);
+        } else {
+            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+        }
     }
     @PostMapping(value = "/create-promotion/category", produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
     public PromotionResponse<CategoryPromotion> categoryPromotion(@RequestBody PromotionRequest<CategoryPromotion> request, PromotionResponse<CategoryPromotion> promotion) {
         PromotionResponse<CategoryPromotion> categoryPromotion = categoryPromotionService.save(request.getPromotion());
-
+/*
         List<SubCategory> subCategories = categoryPromotion.getPromotion().getCategory().getSubCategories();
         List<Product> productList = subCategories.stream()
                 .flatMap(sub -> sub.getProducts().stream())
@@ -97,6 +105,8 @@ public class PromotionController {
            }
        }
 
+
+ */
 
         promotion.setPromotion(categoryPromotion.getPromotion());
         return promotion;

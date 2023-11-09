@@ -4,6 +4,7 @@ import com.marjane.Entities.Center;
 import com.marjane.Entities.City;
 import com.marjane.Entities.ProxyAdmin;
 import jakarta.persistence.*;
+import lombok.Builder;
 import lombok.Data;
 import org.hibernate.annotations.CreationTimestamp;
 
@@ -11,6 +12,7 @@ import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
+
 
 
 @Data

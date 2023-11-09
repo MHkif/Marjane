@@ -1,0 +1,56 @@
+{
+  "id": 11,
+  "product": {
+    "id": 2,
+    "subCategory": {
+      "id": 1,
+      "category": {
+        "id": 4,
+        "name": "cat1",
+        "admin": {
+          "firstName": "AbdelMalek",
+          "lastName": "Achkif",
+          "email": "achkif@gmail.com",
+          "password": "aqwzsxedc77",
+          "phone": "+212771311145",
+          "cin": "SQ570980",
+          "superAdmin": null
+        },
+        "subCategories": []
+      },
+      "name": "cat1",
+      "admin": {
+        "firstName": "AbdelMalek",
+        "lastName": "Achkif",
+        "email": "achkif@gmail.com",
+        "password": "aqwzsxedc77",
+        "phone": "+212771311145",
+        "cin": "SQ570980",
+        "superAdmin": null
+      },
+      "products": []
+    },
+    "admin": {
+      "firstName": "AbdelMalek",
+      "lastName": "Achkif",
+      "email": "achkif@gmail.com",
+      "password": "aqwzsxedc77",
+      "phone": "+212771311145",
+      "cin": "SQ570980",
+      "superAdmin": null
+    },
+    "name": "product 1",
+    "stock": null
+  },
+  "admin": {
+    "firstName": "AbdelMalek",
+    "lastName": "Achkif",
+    "email": "achkif@gmail.com",
+    "password": "aqwzsxedc77",
+    "phone": "+212771311145",
+    "cin": "SQ570980",
+    "superAdmin": null
+  },
+  "percentage": null,
+  "createdAt"
+}

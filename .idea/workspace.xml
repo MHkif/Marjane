@@ -10,75 +10,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c99c93db-daa5-448e-b741-cb00dcb5c9bf" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/marjane/Controllers/PromotionController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/marjane/Controllers/ProxyAdminController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/marjane/Controllers/SuperAdminController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/marjane/DTOs/Abstracts/PromotionDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/marjane/DTOs/Requests/CategoryPromotionRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/marjane/DTOs/Requests/LoginRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/marjane/DTOs/Requests/ManagerRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/marjane/DTOs/Requests/PromotionRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/marjane/DTOs/Requests/RegisterRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/marjane/DTOs/Requests/SubCategoryPromotionRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/marjane/DTOs/Responses/CategoryPromotionResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/marjane/DTOs/Responses/ManagerResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/marjane/DTOs/Responses/ProductPromotionResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/marjane/DTOs/Responses/PromotionResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/marjane/DTOs/Responses/ProxyAdminResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/marjane/DTOs/Responses/SubCategoryPromotionResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/marjane/DTOs/Responses/SuperAdminResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/marjane/Entities/Abstracts/Person.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/marjane/Entities/Abstracts/Promotion.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/marjane/Entities/Customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/marjane/Entities/CustomerPoints.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/marjane/Entities/Implementations/PromotionCenterId.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/marjane/Entities/Implementations/PromotionImp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/marjane/Entities/PromotionCenter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/marjane/Entities/Stock.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/marjane/Enums/PromotionStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/marjane/Repositories/ProductPromotionRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/marjane/Repositories/ProxyAdminRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/marjane/Repositories/SuperAdminRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/marjane/Services/Implementations/ProductPromotionServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/marjane/Services/Implementations/PromotionServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/marjane/Services/Implementations/ProxyAdminServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/marjane/Services/Implementations/SuperAdminServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/marjane/Services/Interfaces/IProductPromotionService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/marjane/Services/Interfaces/IPromotionService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/marjane/Services/Interfaces/IProxyAdminService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/marjane/Services/Interfaces/ISuperAdminService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/marjane/Repositories/SuperAdminRepositoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/marjane/DTOs/ProductPromotionDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/marjane/Services/Implementations/ProductPromServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/marjane/Services/Interfaces/ProductPromotionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/marjane/Config/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/marjane/Config/AppConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/marjane/Config/AppFrontController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/marjane/Config/AppFrontController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/marjane/Controllers/PromotionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/marjane/Controllers/PromotionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/marjane/Entities/Abstracts/Promotion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/marjane/Entities/Abstracts/Promotion.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/marjane/Entities/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/marjane/Entities/Category.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/marjane/Entities/CategoryPromotion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/marjane/Entities/CategoryPromotion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/marjane/Entities/Center.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/marjane/Entities/Center.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/marjane/Entities/City.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/marjane/Entities/City.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/marjane/Entities/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/marjane/Entities/Manager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/marjane/Entities/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/marjane/Entities/Product.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/marjane/Entities/ProductPromotion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/marjane/Entities/ProductPromotion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/marjane/Entities/Promotion.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/marjane/Entities/ProxyAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/marjane/Entities/ProxyAdmin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/marjane/Entities/SubCategory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/marjane/Entities/SubCategory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/marjane/Entities/SubCategoryPromotion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/marjane/Entities/SubCategoryPromotion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/marjane/Entities/SuperAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/marjane/Entities/SuperAdmin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/marjane/Http/Controllers/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/marjane/Controllers/HomeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/marjane/Http/Controllers/SuperAdminController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/marjane/Http/Requests/ManagerRequest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/marjane/Http/Requests/ProxyAdminRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/marjane/DTOs/Requests/ProxyAdminRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/marjane/Http/Responses/ManagerResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/marjane/Http/Responses/ProxyAdminResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/marjane/Utils/HibernateSessionFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/marjane/Utils/HibernateSessionFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/marjane/Utils/PrintStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/marjane/Utils/PrintStatement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/marjane/Utils/Session.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/marjane/Utils/Session.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/marjane/Utils/UniqueCodeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/marjane/Utils/UniqueCodeGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/marjane/Utils/Validator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/marjane/Utils/Validator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/marjane/Repositories/SuperAdminRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/marjane/Repositories/SuperAdminRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,12 +74,13 @@
     "WebServerToolWindowFactoryState": "false",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "develop",
     "last_opened_file_path": "C:/Users/Mhkif/Desktop/JavaVentures/Youcode projects/AirAfrika3",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
@@ -165,13 +108,7 @@
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 10.1.14">
-    <configuration name="All in generated-requests" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http">
-      <method v="2" />
-    </configuration>
     <configuration name="generated-requests | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" requestIdentifier="#1" runType="Run single request">
-      <method v="2" />
-    </configuration>
-    <configuration name="generated-requests | #5" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="5" requestIdentifier="#5" runType="Run single request">
       <method v="2" />
     </configuration>
     <configuration name="Tomcat 10.1.14" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.1.14" ALTERNATIVE_JRE_ENABLED="false">
@@ -262,15 +199,11 @@
     </configuration>
     <list>
       <item itemvalue="HTTP Request.generated-requests | #1" />
-      <item itemvalue="HTTP Request.generated-requests | #5" />
-      <item itemvalue="HTTP Request.All in generated-requests" />
       <item itemvalue="Tomcat Server.Tomcat 10.1.14" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="HTTP Request.generated-requests | #1" />
-        <item itemvalue="HTTP Request.generated-requests | #5" />
-        <item itemvalue="HTTP Request.All in generated-requests" />
       </list>
     </recent_temporary>
   </component>
@@ -284,7 +217,7 @@
       <updated>1698933684695</updated>
       <workItem from="1698933685777" duration="1126000" />
       <workItem from="1698937172300" duration="28621000" />
-      <workItem from="1699114493322" duration="53331000" />
+      <workItem from="1699114493322" duration="61797000" />
     </task>
     <servers />
   </component>
