@@ -10,17 +10,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c99c93db-daa5-448e-b741-cb00dcb5c9bf" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/marjane/DTOs/ProductPromotionDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/marjane/Services/Implementations/ProductPromServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/marjane/Services/Interfaces/ProductPromotionService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/marjane/DTOs/CategoryPromotionDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/marjane/DTOs/SubCategoryPromotionDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/marjane/Controllers/PromotionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/marjane/Controllers/PromotionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/marjane/Entities/Abstracts/Promotion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/marjane/Entities/Abstracts/Promotion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/marjane/Entities/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/marjane/Entities/Category.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/marjane/Entities/ProductPromotion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/marjane/Entities/ProductPromotion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/marjane/Repositories/SuperAdminRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/marjane/Repositories/SuperAdminRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -217,7 +210,7 @@
       <updated>1698933684695</updated>
       <workItem from="1698933685777" duration="1126000" />
       <workItem from="1698937172300" duration="28621000" />
-      <workItem from="1699114493322" duration="61797000" />
+      <workItem from="1699114493322" duration="62652000" />
     </task>
     <servers />
   </component>

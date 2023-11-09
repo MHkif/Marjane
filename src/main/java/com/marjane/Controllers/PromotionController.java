@@ -1,9 +1,11 @@
 package com.marjane.Controllers;
 
+import com.marjane.DTOs.CategoryPromotionDTO;
 import com.marjane.DTOs.ProductPromotionDTO;
 import com.marjane.DTOs.Requests.PromotionRequest;
 import com.marjane.DTOs.Responses.ProductPromotionResponse;
 import com.marjane.DTOs.Responses.PromotionResponse;
+import com.marjane.DTOs.SubCategoryPromotionDTO;
 import com.marjane.Entities.*;
 import com.marjane.Entities.Abstracts.Promotion;
 import com.marjane.Services.Implementations.ProductPromServiceImpl;
@@ -66,7 +68,6 @@ public class PromotionController {
     @ResponseBody
     public ResponseEntity<ProductPromotionDTO> productPromotion(@RequestBody ProductPromotionDTO request) {
         ProductPromotionDTO promotion = service.save(request);
-
         if (promotion != null) {
             return new ResponseEntity<>(promotion, HttpStatus.OK);
         } else {
@@ -75,7 +76,7 @@ public class PromotionController {
     }
     @PostMapping(value = "/create-promotion/category", produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
-    public PromotionResponse<CategoryPromotion> categoryPromotion(@RequestBody PromotionRequest<CategoryPromotion> request, PromotionResponse<CategoryPromotion> promotion) {
+    public ResponseEntity<CategoryPromotionDTO> categoryPromotion(@RequestBody PromotionRequest<CategoryPromotion> request) {
         PromotionResponse<CategoryPromotion> categoryPromotion = categoryPromotionService.save(request.getPromotion());
 /*
         List<SubCategory> subCategories = categoryPromotion.getPromotion().getCategory().getSubCategories();
@@ -107,18 +108,17 @@ public class PromotionController {
 
 
  */
-
-        promotion.setPromotion(categoryPromotion.getPromotion());
-        return promotion;
+       
+      //  return new ResponseEntity<>(categoryDTO, HttpStatus.OK);
+        return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
 
     @PostMapping(value = "/create-promotion/subCategory", produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
-    public PromotionResponse<SubCategoryPromotion> subCategoryPromotion(@RequestBody PromotionRequest<SubCategoryPromotion> request, PromotionResponse<SubCategoryPromotion> promotion) {
+    public ResponseEntity<SubCategoryPromotionDTO> subCategoryPromotion(@RequestBody PromotionRequest<SubCategoryPromotion> request) {
         PromotionResponse<SubCategoryPromotion> subCategoryPromotion = subCategoryPromotionService.save(request.getPromotion());
-        promotion.setPromotion(subCategoryPromotion.getPromotion());
+        return new ResponseEntity<>(HttpStatus.NOT_FOUND);
 
-        return promotion;
     }
 
 
