@@ -1,3 +1,41 @@
+POST http://localhost:8080/managers/register
+Content-Type: application/json
+Content-Length: 564
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+
+  "admin": {
+    "firstName": "AbdelMalek",
+    "lastName": "Achkif",
+    "email": "achkif@gmail.com",
+    "password": "aqwzsxedc77",
+    "phone": "+212771311145",
+    "cin": "SQ570980",
+    "superAdmin": {
+      "firstName": "AbdelMalek",
+      "lastName": "Achkif",
+      "email": "achkif@gmail.com",
+      "password": "aqwzsxedc",
+      "phone": "+212771311145",
+      "cin": "SQ456789"
+    }
+  },
+  "cin": "TP879865",
+  "email": "manager2@gmail.com",
+  "password": "azertyuiop",
+  "firstName": "Second",
+  "lastName": "Manager",
+  "phone": "212237094780"
+
+}
+
+<> 2023-11-12T001655.500.html
+
+###
+
 POST http://localhost:8080/manager/login
 Content-Type: application/json
 Content-Length: 62

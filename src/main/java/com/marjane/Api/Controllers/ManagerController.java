@@ -63,19 +63,10 @@ public class ManagerController {
 
     @PostMapping(value = "/managers/register", produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
-    public ResponseEntity<ManagerDTO> register(@RequestBody ManagerDTO request){
-        ManagerDTO managerDTO = ManagerDTO.builder()
-                .cin(request.getCin())
-                .admin(request.getAdmin())
-                .email(request.getEmail())
-                .password(request.getPassword())
-                .firstName(request.getFirstName())
-                .lastName(request.getLastName())
-                .phone(request.getPhone())
-                .build();
+    public ResponseEntity<ManagerDTO> register(@RequestBody ManagerDTO managerDTO){
 
         Optional<Manager> manager = service.save(managerDTO);
-        return manager.map(managerEntity -> new ResponseEntity<>(service.mapToDTO(managerEntity), HttpStatus.OK)).orElseGet(() -> new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR));
+        return manager.map(managerEntity -> new ResponseEntity<>(service.mapToDTO(managerEntity), HttpStatus.CREATED)).orElseGet(() -> new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR));
     }
 
 

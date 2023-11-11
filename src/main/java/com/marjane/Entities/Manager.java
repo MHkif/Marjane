@@ -6,6 +6,8 @@ import lombok.*;
 
 @EqualsAndHashCode(callSuper = true)
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
 @Table(name = "managers")
 public class Manager extends Person {

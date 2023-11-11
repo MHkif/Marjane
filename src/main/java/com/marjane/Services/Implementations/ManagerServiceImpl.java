@@ -31,8 +31,9 @@ public class ManagerServiceImpl implements IManagerService {
     }
 
     @Override
-    public Manager save(ManagerDTO managerDTO) {
-        return repository.save(mapToEntity(managerDTO));
+    public Optional<Manager> save(ManagerDTO managerDTO) {
+        Manager manager = mapToEntity(managerDTO);
+        return Optional.of(repository.save(manager));
     }
 
     @Override
@@ -59,7 +60,7 @@ public class ManagerServiceImpl implements IManagerService {
 
     public Manager mapToEntity(ManagerDTO managerDTO){
         Manager manager =  new Manager();
-        manager.setCin(manager.getCin());
+        manager.setCin(managerDTO.getCin());
         manager.setAdmin(managerDTO.getAdmin());
         manager.setEmail(managerDTO.getEmail());
         manager.setPassword(managerDTO.getPassword());

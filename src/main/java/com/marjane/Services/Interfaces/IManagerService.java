@@ -13,7 +13,7 @@ public interface IManagerService {
 
     List<ManagerDTO> findAll();
 
-    Manager  save(ManagerDTO t);
+    Optional<Manager>  save(ManagerDTO t);
 
     void delete(String cin);
 
