@@ -1,4 +1,4 @@
-package com.marjane.Controllers;
+package com.marjane.Api.Controllers;
 
 
 import org.springframework.web.bind.annotation.RestController;

@@ -1,8 +1,8 @@
 package com.marjane.Entities;
 
 import jakarta.persistence.*;
-import lombok.*;
-@NoArgsConstructor
+import lombok.Data;
+
 @Data
 @Entity
 @Table(name = "cities")
@@ -16,7 +16,7 @@ public class City {
     @Column(name = "name", length = 255, nullable = false)
     private String name;
 
-    @Column(name = "country", length = 255, columnDefinition = "DEFAULT 'Morocco'")
+    @Column(name = "country", length = 255)
     private String country;
 
 }

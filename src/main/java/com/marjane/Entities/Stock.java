@@ -16,6 +16,10 @@ public class Stock {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @ManyToOne
+    @JoinColumn(name = "admin_id", referencedColumnName = "CIN", nullable = false)
+    private ProxyAdmin admin;
+
     @OneToOne
     @JoinColumn(name = "product_id", referencedColumnName = "id")
     private Product product;

@@ -25,8 +25,11 @@ public class ProductPromotion extends Promotion {
     @JoinColumn(name = "product_id", nullable = false)
     private Product product;
 
+    /*
     @OneToMany(mappedBy = "promotion")
     private List<PromotionCenter> promotionCenters = new ArrayList<>();
+
+     */
 }
 
 

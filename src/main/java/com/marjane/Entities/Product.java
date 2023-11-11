@@ -13,12 +13,9 @@ public class Product {
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name = "subCat_id", nullable = false)
-    private SubCategory subCategory;
+    @JoinColumn(name = "cat_id", nullable = false)
+    private Category category;
 
-    @ManyToOne
-    @JoinColumn(name = "admin_id", referencedColumnName = "CIN", nullable = false)
-    private ProxyAdmin admin;
 
     @Column(name = "name", length = 255, nullable = false)
     private String name;

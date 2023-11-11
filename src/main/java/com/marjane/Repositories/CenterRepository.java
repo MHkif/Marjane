@@ -1,12 +1,9 @@
 package com.marjane.Repositories;
 
-import com.marjane.Entities.ProductPromotion;
+import com.marjane.Entities.Center;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-
-
 @Repository
-public interface ProductPromotionRepository extends JpaRepository<ProductPromotion, Long> {
-
+public interface CenterRepository extends JpaRepository<Center, Long> {
 }

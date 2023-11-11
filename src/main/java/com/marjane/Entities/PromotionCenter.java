@@ -31,8 +31,12 @@ public class PromotionCenter {
     private Manager manager;
 
     @Enumerated(EnumType.STRING)
-    private PromotionStatus status = PromotionStatus.PENDING;
+    private PromotionStatus status;
 
     private LocalDateTime performedAt;
+
+    public PromotionCenter() {
+        this.status = PromotionStatus.PENDING;
+    }
 
 }

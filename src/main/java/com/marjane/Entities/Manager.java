@@ -5,8 +5,6 @@ import jakarta.persistence.*;
 import lombok.*;
 
 @EqualsAndHashCode(callSuper = true)
-@NoArgsConstructor
-@AllArgsConstructor
 @Data
 @Entity
 @Table(name = "managers")

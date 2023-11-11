@@ -1,12 +1,9 @@
-package com.marjane.Controllers;
+package com.marjane.Api.Controllers;
 
 
 import com.marjane.Entities.ProxyAdmin;
-import com.marjane.DTOs.Requests.ManagerRequest;
 import com.marjane.DTOs.Requests.ProxyAdminRequest;
-import com.marjane.DTOs.Responses.ManagerResponse;
 import com.marjane.DTOs.Responses.ProxyAdminResponse;
-import com.marjane.Entities.SuperAdmin;
 import com.marjane.Repositories.SuperAdminRepository;
 import com.marjane.Services.Implementations.ProxyAdminServiceImpl;
 import com.marjane.Services.Implementations.SuperAdminServiceImpl;
@@ -53,19 +50,7 @@ public class ProxyAdminController {
 
         return proxyAdminResponse;
     }
-    @PostMapping(value = "/proxy-admin/create/manager", produces = MediaType.APPLICATION_JSON_VALUE)
-    @ResponseBody
-    public ManagerResponse createManager(@RequestBody ManagerRequest request, ManagerResponse manager) {
-        // # TODO: call Service
 
-        manager.setCin(request.getCin());
-        manager.setFirstName(request.getFirstName());
-        manager.setLastName(request.getLastName());
-        manager.setEmail(request.getEmail());
-        manager.setPassword(request.getPassword());
-        return manager;
-    }
-
-
+    
 
 }

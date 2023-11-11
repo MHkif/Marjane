@@ -1,5 +1,6 @@
 package com.marjane.DTOs;
 
+import com.marjane.Entities.Center;
 import com.marjane.Entities.Product;
 import com.marjane.Entities.ProxyAdmin;
 import jakarta.persistence.*;
@@ -11,6 +12,7 @@ import org.hibernate.annotations.CreationTimestamp;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Builder
 @AllArgsConstructor
@@ -24,4 +26,5 @@ public class ProductPromotionDTO {
     private LocalDateTime createdAt;
     private LocalDateTime startAt;
     private LocalDateTime endAt;
+    private List<Center> centers;
 }

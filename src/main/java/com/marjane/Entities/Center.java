@@ -1,6 +1,5 @@
 package com.marjane.Entities;
 
-import com.marjane.Entities.Abstracts.Promotion;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -27,20 +26,16 @@ public class Center {
     @ManyToOne
     @JoinColumn(name = "admin_id")
     private ProxyAdmin admin;
+
 /*
-    @ManyToMany(mappedBy = "centers")
-    private List<CategoryPromotion> categoryPromotions;
 
     @ManyToMany(mappedBy = "centers")
     private List<ProductPromotion> productPromotions;
 
-    @ManyToMany(mappedBy = "centers")
-    private List<SubCategoryPromotion> subCategoryPromotions;
-
-
-
- */
     @OneToMany(mappedBy = "center")
     private List<PromotionCenter> centerPromotions = new ArrayList<>();
+
+ */
+
 
 }

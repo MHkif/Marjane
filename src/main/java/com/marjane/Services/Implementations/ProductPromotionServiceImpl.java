@@ -1,49 +1,162 @@
 package com.marjane.Services.Implementations;
 
-import com.marjane.Entities.Abstracts.Promotion;
+import com.marjane.DTOs.ManagerDTO;
+import com.marjane.DTOs.ProductPromotionDTO;
+import com.marjane.DTOs.PromotionCenterDTO;
+import com.marjane.Entities.Center;
+import com.marjane.Entities.Implementations.PromotionCenterId;
+import com.marjane.Entities.Manager;
 import com.marjane.Entities.ProductPromotion;
-import com.marjane.DTOs.Responses.ProductPromotionResponse;
+import com.marjane.Repositories.CenterRepository;
 import com.marjane.Repositories.ProductPromotionRepository;
 import com.marjane.Services.Interfaces.IProductPromotionService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.crossstore.ChangeSetPersister;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Objects;
 import java.util.Optional;
+import java.util.stream.Collectors;
+
 
 @Service
-public class ProductPromotionServiceImpl implements IProductPromotionService<Optional<ProductPromotionResponse>> {
+public class ProductPromotionServiceImpl implements IProductPromotionService {
 
     private ProductPromotionRepository repository;
+    private CenterRepository centerRepository;
+    private PromotionCenterServiceImpl promotionCenterService;
+    private ManagerServiceImpl managerService;
+
 
     @Autowired
-    public ProductPromotionServiceImpl(ProductPromotionRepository repository) {
+    public ProductPromotionServiceImpl(ProductPromotionRepository repository,
+                                       PromotionCenterServiceImpl promotionCenterService,
+                                       ManagerServiceImpl managerService,
+                                       CenterRepository centerRepository) {
         this.repository = repository;
+        this.promotionCenterService = promotionCenterService;
+        this.managerService = managerService;
+        this.centerRepository = centerRepository;
+    }
+
+
+
+
+    @Override
+    public Optional<ProductPromotion> findById(Long id) {
+        return repository.findById(id);
     }
 
     @Override
-    public Optional<ProductPromotionResponse> findById(Long id) {
-        ProductPromotion promotion =  repository.findById(id).orElse(null);
-        return Optional.of(new ProductPromotionResponse(promotion.getId(), promotion));
+    public List<ProductPromotion> findAll() {
+        return repository.findAll();
     }
 
     @Override
-    public List<Optional<ProductPromotionResponse>> findAll() {
-        return null;
-    }
+    public Optional<ProductPromotion> save(ProductPromotionDTO promotion) {
+        ProductPromotion productPromotion = mapToEntity(promotion);
+        Optional<Manager> manager = managerService.findByCIN(productPromotion.getProduct().getCategory().getDepartment().getManager().getCin());
 
-    @Override
-    public Optional<ProductPromotionResponse> save(Promotion promotion) {
-        if(promotion instanceof ProductPromotion ){
-            repository.save((ProductPromotion) promotion);
-            return Optional.of(new ProductPromotionResponse(2L, (ProductPromotion) promotion));
-        }  else
+        if(manager.isPresent()){
+            repository.save(productPromotion);
+
+            List<PromotionCenterDTO> promotionCenterDTOs = promotion.getCenters().stream()
+                    .map(center -> {
+                        try {
+                            return PromotionCenterDTO.builder()
+                                    .id(new PromotionCenterId(productPromotion.getId(), center.getId()))
+                                    .productPromotion(productPromotion)
+                                    //.center(centerRepository.findById(2L).orElseThrow(() -> new Exception("Center not found with ID 2")))
+                                    .center(Optional.of(center).orElseThrow(() -> new Exception("Center not found with ID "+ center.getId())))
+                                    .manager(manager.orElseThrow(() -> new Exception("Manager not found")))
+                                    .performedAt(null)
+                                    .build();
+                        } catch (Exception e) {
+                            throw new RuntimeException(e);
+                        }
+                    })
+                    .collect(Collectors.toList());
+
+            promotionCenterDTOs.forEach(promotionCenterService::save);
+
+            return Optional.of(productPromotion);
+        }else {
             return Optional.empty();
+        }
 
     }
+
+    @Override
+    public Optional<ProductPromotion> update(ProductPromotionDTO promotion) {
+        ProductPromotion productPromotion = mapToEntity(promotion);
+        // Directly fetch the Manager entity
+        Optional<Manager> manager = managerService.findByCIN(productPromotion.getProduct().getCategory().getDepartment().getManager().getCin());
+
+        if(manager.isPresent()){
+            repository.save(productPromotion);
+
+            // Use Stream API for PromotionCenterDTO creation
+            List<PromotionCenterDTO> promotionCenterDTOs = promotion.getCenters().stream()
+                    .map(center -> {
+                        try {
+                            return PromotionCenterDTO.builder()
+                                    .id(new PromotionCenterId(productPromotion.getId(), 2L))
+                                    .productPromotion(productPromotion)
+                                    .center(centerRepository.findById(2L).orElseThrow(() -> new Exception("Center not found with ID 2")))
+                                    .manager(manager.orElseThrow(() -> new Exception("Manager not found")))
+                                    .performedAt(null)
+                                    .build();
+                        } catch (Exception e) {
+                            throw new RuntimeException(e);
+                        }
+                    })
+                    .collect(Collectors.toList());
+
+            // Save all PromotionCenterDTOs
+            promotionCenterDTOs.forEach(promotionCenterService::save);
+
+            return Optional.of(productPromotion);
+        }else {
+            return Optional.empty();
+        }
+
+    }
+
 
     @Override
     public void delete(Long id) {
 
+    }
+
+    public ProductPromotionDTO mapToDTO(ProductPromotion promotion){
+        if (promotion == null) {
+            return null; // or throw an exception, depending on your requirements
+        }
+        return ProductPromotionDTO.builder()
+                .id(promotion.getId())
+                .admin(promotion.getAdmin())
+                .product(promotion.getProduct())
+                .percentage(promotion.getPercentage())
+                .createdAt(promotion.getCreatedAt())
+                .startAt(promotion.getStartAt())
+                .endAt(promotion.getEndAt())
+                .build();
+    }
+
+    public ProductPromotion mapToEntity(ProductPromotionDTO promotion){
+        if (promotion == null) {
+            return null; // or throw an exception, depending on your requirements
+        }
+        ProductPromotion productPromotion =  new ProductPromotion();
+        productPromotion.setId(promotion.getId());
+        productPromotion.setAdmin(promotion.getAdmin());
+        productPromotion.setProduct(promotion.getProduct());
+        productPromotion.setPercentage(promotion.getPercentage());
+        productPromotion.setCreatedAt(promotion.getCreatedAt());
+        productPromotion.setStartAt(promotion.getStartAt());
+        productPromotion.setEndAt(promotion.getEndAt());
+
+        return productPromotion;
     }
 }

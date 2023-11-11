@@ -1,4 +1,4 @@
-package com.marjane.Controllers;
+package com.marjane.Api.Controllers;
 
 
 import com.marjane.DTOs.Responses.SuperAdminResponse;
