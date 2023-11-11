@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="fr">
+<head><title>État HTTP 500 – Erreur interne du serveur</title>
+    <style type="text/css">body {
+        font-family: Tahoma, Arial, sans-serif;
+    }
+
+    h1, h2, h3, b {
+        color: white;
+        background-color: #525D76;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    h2 {
+        font-size: 16px;
+    }
+
+    h3 {
+        font-size: 14px;
+    }
+
+    p {
+        font-size: 12px;
+    }
+
+    a {
+        color: black;
+    }
+
+    .line {
+        height: 1px;
+        background-color: #525D76;
+        border: none;
+    }</style>
+</head>
+<body><h1>État HTTP 500 – Erreur interne du serveur</h1>
+<hr class="line"/>
+<p><b>Type</b> Rapport d'exception</p>
+<p><b>message</b> Request processing failed: java.lang.NullPointerException: Cannot invoke &quot;com.marjane.DTOs.CategoryPromotionDTO.getCategory()&quot;
+    because &quot;categoryPromotion&quot; is null</p>
+<p><b>description</b> Le serveur a rencontré une erreur interne qui l'a empêché de satisfaire la requête.</p>
+<p><b>exception</b></p>
+<pre>jakarta.servlet.ServletException: Request processing failed: java.lang.NullPointerException: Cannot invoke &quot;com.marjane.DTOs.CategoryPromotionDTO.getCategory()&quot; because &quot;categoryPromotion&quot; is null
+	org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1019)
+	org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+</pre>
+<p><b>cause mère</b></p>
+<pre>java.lang.NullPointerException: Cannot invoke &quot;com.marjane.DTOs.CategoryPromotionDTO.getCategory()&quot; because &quot;categoryPromotion&quot; is null
+	com.marjane.Controllers.PromotionController.categoryPromotion(PromotionController.java:79)
+	java.base&#47;jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	java.base&#47;java.lang.reflect.Method.invoke(Method.java:578)
+	org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884)
+	org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081)
+	org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974)
+	org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011)
+	org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+</pre>
+<p><b>note</b> La trace complète de la cause mère de cette erreur est disponible dans les fichiers journaux de ce
+    serveur.</p>
+<hr class="line"/>
+<h3>Apache Tomcat/10.1.14</h3></body>
+</html>

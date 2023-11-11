@@ -1,16 +1,13 @@
 package com.marjane.Services.Implementations;
 
 import com.marjane.DTOs.ManagerDTO;
-import com.marjane.DTOs.ProductPromotionDTO;
 import com.marjane.Entities.Manager;
-import com.marjane.Entities.ProductPromotion;
 import com.marjane.Repositories.ManagerRepository;
 import com.marjane.Services.Interfaces.IManagerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Objects;
 import java.util.Optional;
 
 @Service
@@ -34,13 +31,18 @@ public class ManagerServiceImpl implements IManagerService {
     }
 
     @Override
-    public Optional<Manager> save(ManagerDTO t) {
-        return null;
+    public Manager save(ManagerDTO managerDTO) {
+        return repository.save(mapToEntity(managerDTO));
     }
 
     @Override
     public void delete(String cin) {
 
+    }
+
+    @Override
+    public Optional<Manager> login(String email, String password) {
+        return repository.findByEmailAndPassword(email, password);
     }
 
     public ManagerDTO mapToDTO(Manager manager){

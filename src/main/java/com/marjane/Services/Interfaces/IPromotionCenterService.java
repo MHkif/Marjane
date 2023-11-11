@@ -12,7 +12,7 @@ import java.util.Optional;
 
 public interface IPromotionCenterService {
 
-
+    List<PromotionCenter> findAllPromsByManager(String manager_cin);
     Optional<PromotionCenter> save(PromotionCenterDTO promotion);
     Optional<PromotionCenter>  findById(PromotionCenterId id);
     List<PromotionCenter> findAll();

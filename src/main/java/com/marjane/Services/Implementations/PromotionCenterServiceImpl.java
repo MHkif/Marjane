@@ -4,6 +4,7 @@ import com.marjane.DTOs.ProductPromotionDTO;
 import com.marjane.DTOs.PromotionCenterDTO;
 import com.marjane.Entities.Center;
 import com.marjane.Entities.Implementations.PromotionCenterId;
+import com.marjane.Entities.Manager;
 import com.marjane.Entities.ProductPromotion;
 import com.marjane.Entities.PromotionCenter;
 import com.marjane.Repositories.PromotionCenterRepository;
@@ -15,20 +16,15 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class PromotionCenterServiceImpl implements IPromotionCenterService {
+public class PromotionCenterServiceImpl implements IPromotionCenterService{
 
     private PromotionCenterRepository repository;
+    private ManagerServiceImpl managerService;
 
     @Autowired
-    public PromotionCenterServiceImpl(PromotionCenterRepository repository) {
+    public PromotionCenterServiceImpl(PromotionCenterRepository repository, ManagerServiceImpl managerService) {
         this.repository = repository;
-    }
-
-
-    @Override
-    public Optional<PromotionCenter> save(PromotionCenterDTO promotionDto) {
-        PromotionCenter promotionCenter = repository.save(mapToEntity(promotionDto));
-        return Optional.of(promotionCenter);
+        this.managerService = managerService;
     }
 
     @Override
@@ -40,6 +36,22 @@ public class PromotionCenterServiceImpl implements IPromotionCenterService {
     @Override
     public List<PromotionCenter> findAll() {
         return repository.findAll();
+    }
+
+    @Override
+    public List<PromotionCenter> findAllPromsByManager(String manager_cin) {
+        Optional<Manager> manager = managerService.findByCIN(manager_cin);
+            try {
+                return repository.findAllByManager(manager.orElseThrow(() -> new Exception("Manager not found")));
+            } catch (Exception e) {
+                throw new RuntimeException(e);
+            }
+    }
+
+    @Override
+    public Optional<PromotionCenter> save(PromotionCenterDTO promotionDto) {
+        PromotionCenter promotionCenter = repository.save(mapToEntity(promotionDto));
+        return Optional.of(promotionCenter);
     }
 
     @Override

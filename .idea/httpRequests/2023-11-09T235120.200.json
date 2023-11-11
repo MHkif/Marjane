@@ -1,0 +1,1098 @@
+[
+  {
+    "id": 1,
+    "product": {
+      "id": 1,
+      "subCategory": {
+        "id": 1,
+        "category": {
+          "id": 4,
+          "name": "cat1",
+          "admin": {
+            "firstName": "AbdelMalek",
+            "lastName": "Achkif",
+            "email": "achkif@gmail.com",
+            "password": "aqwzsxedc77",
+            "phone": "+212771311145",
+            "cin": "SQ570980",
+            "superAdmin": {
+              "firstName": "AbdelMalek",
+              "lastName": "Achkif",
+              "email": "achkif@gmail.com",
+              "password": "aqwzsxedc",
+              "phone": "+212771311145",
+              "cin": "SQ456789"
+            }
+          }
+        },
+        "name": "cat1",
+        "admin": {
+          "firstName": "AbdelMalek",
+          "lastName": "Achkif",
+          "email": "achkif@gmail.com",
+          "password": "aqwzsxedc77",
+          "phone": "+212771311145",
+          "cin": "SQ570980",
+          "superAdmin": {
+            "firstName": "AbdelMalek",
+            "lastName": "Achkif",
+            "email": "achkif@gmail.com",
+            "password": "aqwzsxedc",
+            "phone": "+212771311145",
+            "cin": "SQ456789"
+          }
+        }
+      },
+      "admin": {
+        "firstName": "AbdelMalek",
+        "lastName": "Achkif",
+        "email": "achkif@gmail.com",
+        "password": "aqwzsxedc77",
+        "phone": "+212771311145",
+        "cin": "SQ570980",
+        "superAdmin": {
+          "firstName": "AbdelMalek",
+          "lastName": "Achkif",
+          "email": "achkif@gmail.com",
+          "password": "aqwzsxedc",
+          "phone": "+212771311145",
+          "cin": "SQ456789"
+        }
+      },
+      "name": "product 1",
+      "stock": null
+    },
+    "admin": {
+      "firstName": "AbdelMalek",
+      "lastName": "Achkif",
+      "email": "achkif@gmail.com",
+      "password": "aqwzsxedc77",
+      "phone": "+212771311145",
+      "cin": "SQ570980",
+      "superAdmin": {
+        "firstName": "AbdelMalek",
+        "lastName": "Achkif",
+        "email": "achkif@gmail.com",
+        "password": "aqwzsxedc",
+        "phone": "+212771311145",
+        "cin": "SQ456789"
+      }
+    },
+    "percentage": null,
+    "createdAt": [
+      2023,
+      11,
+      9,
+      0,
+      56,
+      56,
+      794935000
+    ],
+    "startAt": null,
+    "endAt": null
+  },
+  {
+    "id": 2,
+    "product": {
+      "id": 1,
+      "subCategory": {
+        "id": 1,
+        "category": {
+          "id": 4,
+          "name": "cat1",
+          "admin": {
+            "firstName": "AbdelMalek",
+            "lastName": "Achkif",
+            "email": "achkif@gmail.com",
+            "password": "aqwzsxedc77",
+            "phone": "+212771311145",
+            "cin": "SQ570980",
+            "superAdmin": {
+              "firstName": "AbdelMalek",
+              "lastName": "Achkif",
+              "email": "achkif@gmail.com",
+              "password": "aqwzsxedc",
+              "phone": "+212771311145",
+              "cin": "SQ456789"
+            }
+          }
+        },
+        "name": "cat1",
+        "admin": {
+          "firstName": "AbdelMalek",
+          "lastName": "Achkif",
+          "email": "achkif@gmail.com",
+          "password": "aqwzsxedc77",
+          "phone": "+212771311145",
+          "cin": "SQ570980",
+          "superAdmin": {
+            "firstName": "AbdelMalek",
+            "lastName": "Achkif",
+            "email": "achkif@gmail.com",
+            "password": "aqwzsxedc",
+            "phone": "+212771311145",
+            "cin": "SQ456789"
+          }
+        }
+      },
+      "admin": {
+        "firstName": "AbdelMalek",
+        "lastName": "Achkif",
+        "email": "achkif@gmail.com",
+        "password": "aqwzsxedc77",
+        "phone": "+212771311145",
+        "cin": "SQ570980",
+        "superAdmin": {
+          "firstName": "AbdelMalek",
+          "lastName": "Achkif",
+          "email": "achkif@gmail.com",
+          "password": "aqwzsxedc",
+          "phone": "+212771311145",
+          "cin": "SQ456789"
+        }
+      },
+      "name": "product 1",
+      "stock": null
+    },
+    "admin": {
+      "firstName": "AbdelMalek",
+      "lastName": "Achkif",
+      "email": "achkif@gmail.com",
+      "password": "aqwzsxedc77",
+      "phone": "+212771311145",
+      "cin": "SQ570980",
+      "superAdmin": {
+        "firstName": "AbdelMalek",
+        "lastName": "Achkif",
+        "email": "achkif@gmail.com",
+        "password": "aqwzsxedc",
+        "phone": "+212771311145",
+        "cin": "SQ456789"
+      }
+    },
+    "percentage": null,
+    "createdAt": [
+      2023,
+      11,
+      9,
+      1,
+      2,
+      33,
+      808526000
+    ],
+    "startAt": null,
+    "endAt": null
+  },
+  {
+    "id": 3,
+    "product": {
+      "id": 1,
+      "subCategory": {
+        "id": 1,
+        "category": {
+          "id": 4,
+          "name": "cat1",
+          "admin": {
+            "firstName": "AbdelMalek",
+            "lastName": "Achkif",
+            "email": "achkif@gmail.com",
+            "password": "aqwzsxedc77",
+            "phone": "+212771311145",
+            "cin": "SQ570980",
+            "superAdmin": {
+              "firstName": "AbdelMalek",
+              "lastName": "Achkif",
+              "email": "achkif@gmail.com",
+              "password": "aqwzsxedc",
+              "phone": "+212771311145",
+              "cin": "SQ456789"
+            }
+          }
+        },
+        "name": "cat1",
+        "admin": {
+          "firstName": "AbdelMalek",
+          "lastName": "Achkif",
+          "email": "achkif@gmail.com",
+          "password": "aqwzsxedc77",
+          "phone": "+212771311145",
+          "cin": "SQ570980",
+          "superAdmin": {
+            "firstName": "AbdelMalek",
+            "lastName": "Achkif",
+            "email": "achkif@gmail.com",
+            "password": "aqwzsxedc",
+            "phone": "+212771311145",
+            "cin": "SQ456789"
+          }
+        }
+      },
+      "admin": {
+        "firstName": "AbdelMalek",
+        "lastName": "Achkif",
+        "email": "achkif@gmail.com",
+        "password": "aqwzsxedc77",
+        "phone": "+212771311145",
+        "cin": "SQ570980",
+        "superAdmin": {
+          "firstName": "AbdelMalek",
+          "lastName": "Achkif",
+          "email": "achkif@gmail.com",
+          "password": "aqwzsxedc",
+          "phone": "+212771311145",
+          "cin": "SQ456789"
+        }
+      },
+      "name": "product 1",
+      "stock": null
+    },
+    "admin": {
+      "firstName": "AbdelMalek",
+      "lastName": "Achkif",
+      "email": "achkif@gmail.com",
+      "password": "aqwzsxedc77",
+      "phone": "+212771311145",
+      "cin": "SQ570980",
+      "superAdmin": {
+        "firstName": "AbdelMalek",
+        "lastName": "Achkif",
+        "email": "achkif@gmail.com",
+        "password": "aqwzsxedc",
+        "phone": "+212771311145",
+        "cin": "SQ456789"
+      }
+    },
+    "percentage": null,
+    "createdAt": [
+      2023,
+      11,
+      9,
+      1,
+      12,
+      39,
+      530158000
+    ],
+    "startAt": null,
+    "endAt": null
+  },
+  {
+    "id": 4,
+    "product": {
+      "id": 1,
+      "subCategory": {
+        "id": 1,
+        "category": {
+          "id": 4,
+          "name": "cat1",
+          "admin": {
+            "firstName": "AbdelMalek",
+            "lastName": "Achkif",
+            "email": "achkif@gmail.com",
+            "password": "aqwzsxedc77",
+            "phone": "+212771311145",
+            "cin": "SQ570980",
+            "superAdmin": {
+              "firstName": "AbdelMalek",
+              "lastName": "Achkif",
+              "email": "achkif@gmail.com",
+              "password": "aqwzsxedc",
+              "phone": "+212771311145",
+              "cin": "SQ456789"
+            }
+          }
+        },
+        "name": "cat1",
+        "admin": {
+          "firstName": "AbdelMalek",
+          "lastName": "Achkif",
+          "email": "achkif@gmail.com",
+          "password": "aqwzsxedc77",
+          "phone": "+212771311145",
+          "cin": "SQ570980",
+          "superAdmin": {
+            "firstName": "AbdelMalek",
+            "lastName": "Achkif",
+            "email": "achkif@gmail.com",
+            "password": "aqwzsxedc",
+            "phone": "+212771311145",
+            "cin": "SQ456789"
+          }
+        }
+      },
+      "admin": {
+        "firstName": "AbdelMalek",
+        "lastName": "Achkif",
+        "email": "achkif@gmail.com",
+        "password": "aqwzsxedc77",
+        "phone": "+212771311145",
+        "cin": "SQ570980",
+        "superAdmin": {
+          "firstName": "AbdelMalek",
+          "lastName": "Achkif",
+          "email": "achkif@gmail.com",
+          "password": "aqwzsxedc",
+          "phone": "+212771311145",
+          "cin": "SQ456789"
+        }
+      },
+      "name": "product 1",
+      "stock": null
+    },
+    "admin": {
+      "firstName": "AbdelMalek",
+      "lastName": "Achkif",
+      "email": "achkif@gmail.com",
+      "password": "aqwzsxedc77",
+      "phone": "+212771311145",
+      "cin": "SQ570980",
+      "superAdmin": {
+        "firstName": "AbdelMalek",
+        "lastName": "Achkif",
+        "email": "achkif@gmail.com",
+        "password": "aqwzsxedc",
+        "phone": "+212771311145",
+        "cin": "SQ456789"
+      }
+    },
+    "percentage": null,
+    "createdAt": [
+      2023,
+      11,
+      9,
+      1,
+      15,
+      54,
+      575525000
+    ],
+    "startAt": null,
+    "endAt": null
+  },
+  {
+    "id": 5,
+    "product": {
+      "id": 1,
+      "subCategory": {
+        "id": 1,
+        "category": {
+          "id": 4,
+          "name": "cat1",
+          "admin": {
+            "firstName": "AbdelMalek",
+            "lastName": "Achkif",
+            "email": "achkif@gmail.com",
+            "password": "aqwzsxedc77",
+            "phone": "+212771311145",
+            "cin": "SQ570980",
+            "superAdmin": {
+              "firstName": "AbdelMalek",
+              "lastName": "Achkif",
+              "email": "achkif@gmail.com",
+              "password": "aqwzsxedc",
+              "phone": "+212771311145",
+              "cin": "SQ456789"
+            }
+          }
+        },
+        "name": "cat1",
+        "admin": {
+          "firstName": "AbdelMalek",
+          "lastName": "Achkif",
+          "email": "achkif@gmail.com",
+          "password": "aqwzsxedc77",
+          "phone": "+212771311145",
+          "cin": "SQ570980",
+          "superAdmin": {
+            "firstName": "AbdelMalek",
+            "lastName": "Achkif",
+            "email": "achkif@gmail.com",
+            "password": "aqwzsxedc",
+            "phone": "+212771311145",
+            "cin": "SQ456789"
+          }
+        }
+      },
+      "admin": {
+        "firstName": "AbdelMalek",
+        "lastName": "Achkif",
+        "email": "achkif@gmail.com",
+        "password": "aqwzsxedc77",
+        "phone": "+212771311145",
+        "cin": "SQ570980",
+        "superAdmin": {
+          "firstName": "AbdelMalek",
+          "lastName": "Achkif",
+          "email": "achkif@gmail.com",
+          "password": "aqwzsxedc",
+          "phone": "+212771311145",
+          "cin": "SQ456789"
+        }
+      },
+      "name": "product 1",
+      "stock": null
+    },
+    "admin": {
+      "firstName": "AbdelMalek",
+      "lastName": "Achkif",
+      "email": "achkif@gmail.com",
+      "password": "aqwzsxedc77",
+      "phone": "+212771311145",
+      "cin": "SQ570980",
+      "superAdmin": {
+        "firstName": "AbdelMalek",
+        "lastName": "Achkif",
+        "email": "achkif@gmail.com",
+        "password": "aqwzsxedc",
+        "phone": "+212771311145",
+        "cin": "SQ456789"
+      }
+    },
+    "percentage": null,
+    "createdAt": [
+      2023,
+      11,
+      9,
+      1,
+      15,
+      59,
+      783504000
+    ],
+    "startAt": null,
+    "endAt": null
+  },
+  {
+    "id": 6,
+    "product": {
+      "id": 1,
+      "subCategory": {
+        "id": 1,
+        "category": {
+          "id": 4,
+          "name": "cat1",
+          "admin": {
+            "firstName": "AbdelMalek",
+            "lastName": "Achkif",
+            "email": "achkif@gmail.com",
+            "password": "aqwzsxedc77",
+            "phone": "+212771311145",
+            "cin": "SQ570980",
+            "superAdmin": {
+              "firstName": "AbdelMalek",
+              "lastName": "Achkif",
+              "email": "achkif@gmail.com",
+              "password": "aqwzsxedc",
+              "phone": "+212771311145",
+              "cin": "SQ456789"
+            }
+          }
+        },
+        "name": "cat1",
+        "admin": {
+          "firstName": "AbdelMalek",
+          "lastName": "Achkif",
+          "email": "achkif@gmail.com",
+          "password": "aqwzsxedc77",
+          "phone": "+212771311145",
+          "cin": "SQ570980",
+          "superAdmin": {
+            "firstName": "AbdelMalek",
+            "lastName": "Achkif",
+            "email": "achkif@gmail.com",
+            "password": "aqwzsxedc",
+            "phone": "+212771311145",
+            "cin": "SQ456789"
+          }
+        }
+      },
+      "admin": {
+        "firstName": "AbdelMalek",
+        "lastName": "Achkif",
+        "email": "achkif@gmail.com",
+        "password": "aqwzsxedc77",
+        "phone": "+212771311145",
+        "cin": "SQ570980",
+        "superAdmin": {
+          "firstName": "AbdelMalek",
+          "lastName": "Achkif",
+          "email": "achkif@gmail.com",
+          "password": "aqwzsxedc",
+          "phone": "+212771311145",
+          "cin": "SQ456789"
+        }
+      },
+      "name": "product 1",
+      "stock": null
+    },
+    "admin": {
+      "firstName": "AbdelMalek",
+      "lastName": "Achkif",
+      "email": "achkif@gmail.com",
+      "password": "aqwzsxedc77",
+      "phone": "+212771311145",
+      "cin": "SQ570980",
+      "superAdmin": {
+        "firstName": "AbdelMalek",
+        "lastName": "Achkif",
+        "email": "achkif@gmail.com",
+        "password": "aqwzsxedc",
+        "phone": "+212771311145",
+        "cin": "SQ456789"
+      }
+    },
+    "percentage": null,
+    "createdAt": [
+      2023,
+      11,
+      9,
+      1,
+      16,
+      39,
+      640667000
+    ],
+    "startAt": null,
+    "endAt": null
+  },
+  {
+    "id": 7,
+    "product": {
+      "id": 1,
+      "subCategory": {
+        "id": 1,
+        "category": {
+          "id": 4,
+          "name": "cat1",
+          "admin": {
+            "firstName": "AbdelMalek",
+            "lastName": "Achkif",
+            "email": "achkif@gmail.com",
+            "password": "aqwzsxedc77",
+            "phone": "+212771311145",
+            "cin": "SQ570980",
+            "superAdmin": {
+              "firstName": "AbdelMalek",
+              "lastName": "Achkif",
+              "email": "achkif@gmail.com",
+              "password": "aqwzsxedc",
+              "phone": "+212771311145",
+              "cin": "SQ456789"
+            }
+          }
+        },
+        "name": "cat1",
+        "admin": {
+          "firstName": "AbdelMalek",
+          "lastName": "Achkif",
+          "email": "achkif@gmail.com",
+          "password": "aqwzsxedc77",
+          "phone": "+212771311145",
+          "cin": "SQ570980",
+          "superAdmin": {
+            "firstName": "AbdelMalek",
+            "lastName": "Achkif",
+            "email": "achkif@gmail.com",
+            "password": "aqwzsxedc",
+            "phone": "+212771311145",
+            "cin": "SQ456789"
+          }
+        }
+      },
+      "admin": {
+        "firstName": "AbdelMalek",
+        "lastName": "Achkif",
+        "email": "achkif@gmail.com",
+        "password": "aqwzsxedc77",
+        "phone": "+212771311145",
+        "cin": "SQ570980",
+        "superAdmin": {
+          "firstName": "AbdelMalek",
+          "lastName": "Achkif",
+          "email": "achkif@gmail.com",
+          "password": "aqwzsxedc",
+          "phone": "+212771311145",
+          "cin": "SQ456789"
+        }
+      },
+      "name": "product 1",
+      "stock": null
+    },
+    "admin": {
+      "firstName": "AbdelMalek",
+      "lastName": "Achkif",
+      "email": "achkif@gmail.com",
+      "password": "aqwzsxedc77",
+      "phone": "+212771311145",
+      "cin": "SQ570980",
+      "superAdmin": {
+        "firstName": "AbdelMalek",
+        "lastName": "Achkif",
+        "email": "achkif@gmail.com",
+        "password": "aqwzsxedc",
+        "phone": "+212771311145",
+        "cin": "SQ456789"
+      }
+    },
+    "percentage": null,
+    "createdAt": null,
+    "startAt": null,
+    "endAt": null
+  },
+  {
+    "id": 8,
+    "product": {
+      "id": 1,
+      "subCategory": {
+        "id": 1,
+        "category": {
+          "id": 4,
+          "name": "cat1",
+          "admin": {
+            "firstName": "AbdelMalek",
+            "lastName": "Achkif",
+            "email": "achkif@gmail.com",
+            "password": "aqwzsxedc77",
+            "phone": "+212771311145",
+            "cin": "SQ570980",
+            "superAdmin": {
+              "firstName": "AbdelMalek",
+              "lastName": "Achkif",
+              "email": "achkif@gmail.com",
+              "password": "aqwzsxedc",
+              "phone": "+212771311145",
+              "cin": "SQ456789"
+            }
+          }
+        },
+        "name": "cat1",
+        "admin": {
+          "firstName": "AbdelMalek",
+          "lastName": "Achkif",
+          "email": "achkif@gmail.com",
+          "password": "aqwzsxedc77",
+          "phone": "+212771311145",
+          "cin": "SQ570980",
+          "superAdmin": {
+            "firstName": "AbdelMalek",
+            "lastName": "Achkif",
+            "email": "achkif@gmail.com",
+            "password": "aqwzsxedc",
+            "phone": "+212771311145",
+            "cin": "SQ456789"
+          }
+        }
+      },
+      "admin": {
+        "firstName": "AbdelMalek",
+        "lastName": "Achkif",
+        "email": "achkif@gmail.com",
+        "password": "aqwzsxedc77",
+        "phone": "+212771311145",
+        "cin": "SQ570980",
+        "superAdmin": {
+          "firstName": "AbdelMalek",
+          "lastName": "Achkif",
+          "email": "achkif@gmail.com",
+          "password": "aqwzsxedc",
+          "phone": "+212771311145",
+          "cin": "SQ456789"
+        }
+      },
+      "name": "product 1",
+      "stock": null
+    },
+    "admin": {
+      "firstName": "AbdelMalek",
+      "lastName": "Achkif",
+      "email": "achkif@gmail.com",
+      "password": "aqwzsxedc77",
+      "phone": "+212771311145",
+      "cin": "SQ570980",
+      "superAdmin": {
+        "firstName": "AbdelMalek",
+        "lastName": "Achkif",
+        "email": "achkif@gmail.com",
+        "password": "aqwzsxedc",
+        "phone": "+212771311145",
+        "cin": "SQ456789"
+      }
+    },
+    "percentage": null,
+    "createdAt": [
+      2023,
+      11,
+      9,
+      1,
+      24,
+      13,
+      170797000
+    ],
+    "startAt": null,
+    "endAt": null
+  },
+  {
+    "id": 9,
+    "product": {
+      "id": 2,
+      "subCategory": {
+        "id": 1,
+        "category": {
+          "id": 4,
+          "name": "cat1",
+          "admin": {
+            "firstName": "AbdelMalek",
+            "lastName": "Achkif",
+            "email": "achkif@gmail.com",
+            "password": "aqwzsxedc77",
+            "phone": "+212771311145",
+            "cin": "SQ570980",
+            "superAdmin": {
+              "firstName": "AbdelMalek",
+              "lastName": "Achkif",
+              "email": "achkif@gmail.com",
+              "password": "aqwzsxedc",
+              "phone": "+212771311145",
+              "cin": "SQ456789"
+            }
+          }
+        },
+        "name": "cat1",
+        "admin": {
+          "firstName": "AbdelMalek",
+          "lastName": "Achkif",
+          "email": "achkif@gmail.com",
+          "password": "aqwzsxedc77",
+          "phone": "+212771311145",
+          "cin": "SQ570980",
+          "superAdmin": {
+            "firstName": "AbdelMalek",
+            "lastName": "Achkif",
+            "email": "achkif@gmail.com",
+            "password": "aqwzsxedc",
+            "phone": "+212771311145",
+            "cin": "SQ456789"
+          }
+        }
+      },
+      "admin": {
+        "firstName": "AbdelMalek",
+        "lastName": "Achkif",
+        "email": "achkif@gmail.com",
+        "password": "aqwzsxedc77",
+        "phone": "+212771311145",
+        "cin": "SQ570980",
+        "superAdmin": {
+          "firstName": "AbdelMalek",
+          "lastName": "Achkif",
+          "email": "achkif@gmail.com",
+          "password": "aqwzsxedc",
+          "phone": "+212771311145",
+          "cin": "SQ456789"
+        }
+      },
+      "name": "product 2",
+      "stock": null
+    },
+    "admin": {
+      "firstName": "AbdelMalek",
+      "lastName": "Achkif",
+      "email": "achkif@gmail.com",
+      "password": "aqwzsxedc77",
+      "phone": "+212771311145",
+      "cin": "SQ570980",
+      "superAdmin": {
+        "firstName": "AbdelMalek",
+        "lastName": "Achkif",
+        "email": "achkif@gmail.com",
+        "password": "aqwzsxedc",
+        "phone": "+212771311145",
+        "cin": "SQ456789"
+      }
+    },
+    "percentage": null,
+    "createdAt": [
+      2023,
+      11,
+      9,
+      1,
+      26,
+      26,
+      407383000
+    ],
+    "startAt": null,
+    "endAt": null
+  },
+  {
+    "id": 10,
+    "product": {
+      "id": 2,
+      "subCategory": {
+        "id": 1,
+        "category": {
+          "id": 4,
+          "name": "cat1",
+          "admin": {
+            "firstName": "AbdelMalek",
+            "lastName": "Achkif",
+            "email": "achkif@gmail.com",
+            "password": "aqwzsxedc77",
+            "phone": "+212771311145",
+            "cin": "SQ570980",
+            "superAdmin": {
+              "firstName": "AbdelMalek",
+              "lastName": "Achkif",
+              "email": "achkif@gmail.com",
+              "password": "aqwzsxedc",
+              "phone": "+212771311145",
+              "cin": "SQ456789"
+            }
+          }
+        },
+        "name": "cat1",
+        "admin": {
+          "firstName": "AbdelMalek",
+          "lastName": "Achkif",
+          "email": "achkif@gmail.com",
+          "password": "aqwzsxedc77",
+          "phone": "+212771311145",
+          "cin": "SQ570980",
+          "superAdmin": {
+            "firstName": "AbdelMalek",
+            "lastName": "Achkif",
+            "email": "achkif@gmail.com",
+            "password": "aqwzsxedc",
+            "phone": "+212771311145",
+            "cin": "SQ456789"
+          }
+        }
+      },
+      "admin": {
+        "firstName": "AbdelMalek",
+        "lastName": "Achkif",
+        "email": "achkif@gmail.com",
+        "password": "aqwzsxedc77",
+        "phone": "+212771311145",
+        "cin": "SQ570980",
+        "superAdmin": {
+          "firstName": "AbdelMalek",
+          "lastName": "Achkif",
+          "email": "achkif@gmail.com",
+          "password": "aqwzsxedc",
+          "phone": "+212771311145",
+          "cin": "SQ456789"
+        }
+      },
+      "name": "product 2",
+      "stock": null
+    },
+    "admin": {
+      "firstName": "AbdelMalek",
+      "lastName": "Achkif",
+      "email": "achkif@gmail.com",
+      "password": "aqwzsxedc77",
+      "phone": "+212771311145",
+      "cin": "SQ570980",
+      "superAdmin": {
+        "firstName": "AbdelMalek",
+        "lastName": "Achkif",
+        "email": "achkif@gmail.com",
+        "password": "aqwzsxedc",
+        "phone": "+212771311145",
+        "cin": "SQ456789"
+      }
+    },
+    "percentage": null,
+    "createdAt": [
+      2023,
+      11,
+      9,
+      1,
+      33,
+      37,
+      77887000
+    ],
+    "startAt": null,
+    "endAt": null
+  },
+  {
+    "id": 11,
+    "product": {
+      "id": 2,
+      "subCategory": {
+        "id": 1,
+        "category": {
+          "id": 4,
+          "name": "cat1",
+          "admin": {
+            "firstName": "AbdelMalek",
+            "lastName": "Achkif",
+            "email": "achkif@gmail.com",
+            "password": "aqwzsxedc77",
+            "phone": "+212771311145",
+            "cin": "SQ570980",
+            "superAdmin": {
+              "firstName": "AbdelMalek",
+              "lastName": "Achkif",
+              "email": "achkif@gmail.com",
+              "password": "aqwzsxedc",
+              "phone": "+212771311145",
+              "cin": "SQ456789"
+            }
+          }
+        },
+        "name": "cat1",
+        "admin": {
+          "firstName": "AbdelMalek",
+          "lastName": "Achkif",
+          "email": "achkif@gmail.com",
+          "password": "aqwzsxedc77",
+          "phone": "+212771311145",
+          "cin": "SQ570980",
+          "superAdmin": {
+            "firstName": "AbdelMalek",
+            "lastName": "Achkif",
+            "email": "achkif@gmail.com",
+            "password": "aqwzsxedc",
+            "phone": "+212771311145",
+            "cin": "SQ456789"
+          }
+        }
+      },
+      "admin": {
+        "firstName": "AbdelMalek",
+        "lastName": "Achkif",
+        "email": "achkif@gmail.com",
+        "password": "aqwzsxedc77",
+        "phone": "+212771311145",
+        "cin": "SQ570980",
+        "superAdmin": {
+          "firstName": "AbdelMalek",
+          "lastName": "Achkif",
+          "email": "achkif@gmail.com",
+          "password": "aqwzsxedc",
+          "phone": "+212771311145",
+          "cin": "SQ456789"
+        }
+      },
+      "name": "product 2",
+      "stock": null
+    },
+    "admin": {
+      "firstName": "AbdelMalek",
+      "lastName": "Achkif",
+      "email": "achkif@gmail.com",
+      "password": "aqwzsxedc77",
+      "phone": "+212771311145",
+      "cin": "SQ570980",
+      "superAdmin": {
+        "firstName": "AbdelMalek",
+        "lastName": "Achkif",
+        "email": "achkif@gmail.com",
+        "password": "aqwzsxedc",
+        "phone": "+212771311145",
+        "cin": "SQ456789"
+      }
+    },
+    "percentage": null,
+    "createdAt": [
+      2023,
+      11,
+      9,
+      1,
+      36,
+      9,
+      832092000
+    ],
+    "startAt": null,
+    "endAt": null
+  },
+  {
+    "id": 12,
+    "product": {
+      "id": 2,
+      "subCategory": {
+        "id": 1,
+        "category": {
+          "id": 4,
+          "name": "cat1",
+          "admin": {
+            "firstName": "AbdelMalek",
+            "lastName": "Achkif",
+            "email": "achkif@gmail.com",
+            "password": "aqwzsxedc77",
+            "phone": "+212771311145",
+            "cin": "SQ570980",
+            "superAdmin": {
+              "firstName": "AbdelMalek",
+              "lastName": "Achkif",
+              "email": "achkif@gmail.com",
+              "password": "aqwzsxedc",
+              "phone": "+212771311145",
+              "cin": "SQ456789"
+            }
+          }
+        },
+        "name": "cat1",
+        "admin": {
+          "firstName": "AbdelMalek",
+          "lastName": "Achkif",
+          "email": "achkif@gmail.com",
+          "password": "aqwzsxedc77",
+          "phone": "+212771311145",
+          "cin": "SQ570980",
+          "superAdmin": {
+            "firstName": "AbdelMalek",
+            "lastName": "Achkif",
+            "email": "achkif@gmail.com",
+            "password": "aqwzsxedc",
+            "phone": "+212771311145",
+            "cin": "SQ456789"
+          }
+        }
+      },
+      "admin": {
+        "firstName": "AbdelMalek",
+        "lastName": "Achkif",
+        "email": "achkif@gmail.com",
+        "password": "aqwzsxedc77",
+        "phone": "+212771311145",
+        "cin": "SQ570980",
+        "superAdmin": {
+          "firstName": "AbdelMalek",
+          "lastName": "Achkif",
+          "email": "achkif@gmail.com",
+          "password": "aqwzsxedc",
+          "phone": "+212771311145",
+          "cin": "SQ456789"
+        }
+      },
+      "name": "product 2",
+      "stock": null
+    },
+    "admin": {
+      "firstName": "AbdelMalek",
+      "lastName": "Achkif",
+      "email": "achkif@gmail.com",
+      "password": "aqwzsxedc77",
+      "phone": "+212771311145",
+      "cin": "SQ570980",
+      "superAdmin": {
+        "firstName": "AbdelMalek",
+        "lastName": "Achkif",
+        "email": "achkif@gmail.com",
+        "password": "aqwzsxedc",
+        "phone": "+212771311145",
+        "cin": "SQ456789"
+      }
+    },
+    "percentage": 35.00,
+    "createdAt": [
+      2023,
+      11,
+      9,
+      1,
+      46,
+      11,
+      729823000
+    ],
+    "startAt": null,
+    "endAt": null
+  }
+]

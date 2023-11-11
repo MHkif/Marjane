@@ -1,0 +1,362 @@
+[
+  {
+    "id": {
+      "centerId": 2,
+      "promotionId": 31
+    },
+    "productPromotion": {
+      "admin": {
+        "firstName": "AbdelMalek",
+        "lastName": "Achkif",
+        "email": "achkif@gmail.com",
+        "password": "aqwzsxedc77",
+        "phone": "+212771311145",
+        "cin": "SQ570980",
+        "superAdmin": {
+          "firstName": "AbdelMalek",
+          "lastName": "Achkif",
+          "email": "achkif@gmail.com",
+          "password": "aqwzsxedc",
+          "phone": "+212771311145",
+          "cin": "SQ456789"
+        }
+      },
+      "percentage": 25.00,
+      "createdAt": [
+        2023,
+        11,
+        11,
+        20,
+        55,
+        49,
+        731099000
+      ],
+      "startAt": null,
+      "endAt": null,
+      "id": 31,
+      "product": {
+        "id": 1,
+        "category": {
+          "id": 1,
+          "department": {
+            "id": 1,
+            "name": "Electronics",
+            "manager": {
+              "firstName": "Manager",
+              "lastName": "FirstOne",
+              "email": "manager@gmail.com",
+              "password": "azertyuiop",
+              "phone": "212787094500",
+              "cin": "DQ456865",
+              "admin": {
+                "firstName": "AbdelMalek",
+                "lastName": "Achkif",
+                "email": "achkif@gmail.com",
+                "password": "aqwzsxedc77",
+                "phone": "+212771311145",
+                "cin": "SQ570980",
+                "superAdmin": {
+                  "firstName": "AbdelMalek",
+                  "lastName": "Achkif",
+                  "email": "achkif@gmail.com",
+                  "password": "aqwzsxedc",
+                  "phone": "+212771311145",
+                  "cin": "SQ456789"
+                }
+              }
+            },
+            "center": {
+              "id": 2,
+              "city": {
+                "id": 1,
+                "name": "Asafi",
+                "country": "Morocco"
+              },
+              "name": "Center A",
+              "admin": null
+            }
+          },
+          "name": "Laptops"
+        },
+        "name": "product 1",
+        "stock": null
+      }
+    },
+    "center": {
+      "id": 2,
+      "city": {
+        "id": 1,
+        "name": "Asafi",
+        "country": "Morocco"
+      },
+      "name": "Center A",
+      "admin": null
+    },
+    "manager": {
+      "firstName": "Manager",
+      "lastName": "FirstOne",
+      "email": "manager@gmail.com",
+      "password": "azertyuiop",
+      "phone": "212787094500",
+      "cin": "DQ456865",
+      "admin": {
+        "firstName": "AbdelMalek",
+        "lastName": "Achkif",
+        "email": "achkif@gmail.com",
+        "password": "aqwzsxedc77",
+        "phone": "+212771311145",
+        "cin": "SQ570980",
+        "superAdmin": {
+          "firstName": "AbdelMalek",
+          "lastName": "Achkif",
+          "email": "achkif@gmail.com",
+          "password": "aqwzsxedc",
+          "phone": "+212771311145",
+          "cin": "SQ456789"
+        }
+      }
+    },
+    "status": "PENDING",
+    "performedAt": null
+  },
+  {
+    "id": {
+      "centerId": 2,
+      "promotionId": 32
+    },
+    "productPromotion": {
+      "admin": {
+        "firstName": "AbdelMalek",
+        "lastName": "Achkif",
+        "email": "achkif@gmail.com",
+        "password": "aqwzsxedc77",
+        "phone": "+212771311145",
+        "cin": "SQ570980",
+        "superAdmin": {
+          "firstName": "AbdelMalek",
+          "lastName": "Achkif",
+          "email": "achkif@gmail.com",
+          "password": "aqwzsxedc",
+          "phone": "+212771311145",
+          "cin": "SQ456789"
+        }
+      },
+      "percentage": 25.00,
+      "createdAt": [
+        2023,
+        11,
+        11,
+        20,
+        58,
+        55,
+        967368000
+      ],
+      "startAt": null,
+      "endAt": null,
+      "id": 32,
+      "product": {
+        "id": 1,
+        "category": {
+          "id": 1,
+          "department": {
+            "id": 1,
+            "name": "Electronics",
+            "manager": {
+              "firstName": "Manager",
+              "lastName": "FirstOne",
+              "email": "manager@gmail.com",
+              "password": "azertyuiop",
+              "phone": "212787094500",
+              "cin": "DQ456865",
+              "admin": {
+                "firstName": "AbdelMalek",
+                "lastName": "Achkif",
+                "email": "achkif@gmail.com",
+                "password": "aqwzsxedc77",
+                "phone": "+212771311145",
+                "cin": "SQ570980",
+                "superAdmin": {
+                  "firstName": "AbdelMalek",
+                  "lastName": "Achkif",
+                  "email": "achkif@gmail.com",
+                  "password": "aqwzsxedc",
+                  "phone": "+212771311145",
+                  "cin": "SQ456789"
+                }
+              }
+            },
+            "center": {
+              "id": 2,
+              "city": {
+                "id": 1,
+                "name": "Asafi",
+                "country": "Morocco"
+              },
+              "name": "Center A",
+              "admin": null
+            }
+          },
+          "name": "Laptops"
+        },
+        "name": "product 1",
+        "stock": null
+      }
+    },
+    "center": {
+      "id": 2,
+      "city": {
+        "id": 1,
+        "name": "Asafi",
+        "country": "Morocco"
+      },
+      "name": "Center A",
+      "admin": null
+    },
+    "manager": {
+      "firstName": "Manager",
+      "lastName": "FirstOne",
+      "email": "manager@gmail.com",
+      "password": "azertyuiop",
+      "phone": "212787094500",
+      "cin": "DQ456865",
+      "admin": {
+        "firstName": "AbdelMalek",
+        "lastName": "Achkif",
+        "email": "achkif@gmail.com",
+        "password": "aqwzsxedc77",
+        "phone": "+212771311145",
+        "cin": "SQ570980",
+        "superAdmin": {
+          "firstName": "AbdelMalek",
+          "lastName": "Achkif",
+          "email": "achkif@gmail.com",
+          "password": "aqwzsxedc",
+          "phone": "+212771311145",
+          "cin": "SQ456789"
+        }
+      }
+    },
+    "status": "PENDING",
+    "performedAt": null
+  },
+  {
+    "id": {
+      "centerId": 2,
+      "promotionId": 33
+    },
+    "productPromotion": {
+      "admin": {
+        "firstName": "AbdelMalek",
+        "lastName": "Achkif",
+        "email": "achkif@gmail.com",
+        "password": "aqwzsxedc77",
+        "phone": "+212771311145",
+        "cin": "SQ570980",
+        "superAdmin": {
+          "firstName": "AbdelMalek",
+          "lastName": "Achkif",
+          "email": "achkif@gmail.com",
+          "password": "aqwzsxedc",
+          "phone": "+212771311145",
+          "cin": "SQ456789"
+        }
+      },
+      "percentage": 25.00,
+      "createdAt": [
+        2023,
+        11,
+        11,
+        21,
+        1,
+        32,
+        555646000
+      ],
+      "startAt": null,
+      "endAt": null,
+      "id": 33,
+      "product": {
+        "id": 1,
+        "category": {
+          "id": 1,
+          "department": {
+            "id": 1,
+            "name": "Electronics",
+            "manager": {
+              "firstName": "Manager",
+              "lastName": "FirstOne",
+              "email": "manager@gmail.com",
+              "password": "azertyuiop",
+              "phone": "212787094500",
+              "cin": "DQ456865",
+              "admin": {
+                "firstName": "AbdelMalek",
+                "lastName": "Achkif",
+                "email": "achkif@gmail.com",
+                "password": "aqwzsxedc77",
+                "phone": "+212771311145",
+                "cin": "SQ570980",
+                "superAdmin": {
+                  "firstName": "AbdelMalek",
+                  "lastName": "Achkif",
+                  "email": "achkif@gmail.com",
+                  "password": "aqwzsxedc",
+                  "phone": "+212771311145",
+                  "cin": "SQ456789"
+                }
+              }
+            },
+            "center": {
+              "id": 2,
+              "city": {
+                "id": 1,
+                "name": "Asafi",
+                "country": "Morocco"
+              },
+              "name": "Center A",
+              "admin": null
+            }
+          },
+          "name": "Laptops"
+        },
+        "name": "product 1",
+        "stock": null
+      }
+    },
+    "center": {
+      "id": 2,
+      "city": {
+        "id": 1,
+        "name": "Asafi",
+        "country": "Morocco"
+      },
+      "name": "Center A",
+      "admin": null
+    },
+    "manager": {
+      "firstName": "Manager",
+      "lastName": "FirstOne",
+      "email": "manager@gmail.com",
+      "password": "azertyuiop",
+      "phone": "212787094500",
+      "cin": "DQ456865",
+      "admin": {
+        "firstName": "AbdelMalek",
+        "lastName": "Achkif",
+        "email": "achkif@gmail.com",
+        "password": "aqwzsxedc77",
+        "phone": "+212771311145",
+        "cin": "SQ570980",
+        "superAdmin": {
+          "firstName": "AbdelMalek",
+          "lastName": "Achkif",
+          "email": "achkif@gmail.com",
+          "password": "aqwzsxedc",
+          "phone": "+212771311145",
+          "cin": "SQ456789"
+        }
+      }
+    },
+    "status": "PENDING",
+    "performedAt": null
+  }
+]

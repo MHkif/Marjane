@@ -9,57 +9,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c99c93db-daa5-448e-b741-cb00dcb5c9bf" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/marjane/Api/Controllers/PromotionController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/marjane/DTOs/ManagerDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/marjane/DTOs/PromotionCenterDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/marjane/Repositories/CategoryRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/marjane/Repositories/CenterRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/marjane/Repositories/ManagerRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/marjane/Repositories/PromotionCenterRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/marjane/Services/Implementations/ManagerServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/marjane/Services/Implementations/PromotionCenterServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/marjane/Services/Interfaces/IManagerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/marjane/Services/Interfaces/IPromotionCenterService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e026082e-d171-4a2d-93da-9530ba44d3fb.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/e026082e-d171-4a2d-93da-9530ba44d3fb.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e026082e-d171-4a2d-93da-9530ba44d3fb/storage_v2/_src_/database/supermarket.dzsnsA/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/e026082e-d171-4a2d-93da-9530ba44d3fb/storage_v2/_src_/database/supermarket.dzsnsA/schema/public.abK9xQ.meta" afterDir="false" />
+    <list default="true" id="c99c93db-daa5-448e-b741-cb00dcb5c9bf" name="Changes" comment="Done : Promotions Implementations">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/marjane/Api/Controllers/ManagerController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/marjane/Controllers/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/marjane/Api/Controllers/HomeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/marjane/Controllers/PromotionController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/marjane/Controllers/ProxyAdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/marjane/Api/Controllers/ProxyAdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/marjane/Controllers/SuperAdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/marjane/Api/Controllers/SuperAdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/marjane/DTOs/CategoryPromotionDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/marjane/DTOs/ProductPromotionDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/marjane/DTOs/ProductPromotionDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/marjane/DTOs/Requests/CategoryPromotionRequest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/marjane/DTOs/Requests/ManagerRequest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/marjane/DTOs/Requests/PromotionRequest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/marjane/DTOs/Requests/SubCategoryPromotionRequest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/marjane/DTOs/Responses/CategoryPromotionResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/marjane/DTOs/Responses/ManagerResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/marjane/DTOs/Responses/PromotionResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/marjane/DTOs/Responses/SubCategoryPromotionResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/marjane/DTOs/SubCategoryPromotionDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/marjane/Entities/Abstracts/Promotion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/marjane/Entities/Abstracts/Promotion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/marjane/Entities/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/marjane/Entities/Category.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/marjane/Entities/CategoryPromotion.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/marjane/Entities/Center.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/marjane/Entities/Center.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/marjane/Entities/City.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/marjane/Entities/City.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/marjane/Entities/Implementations/PromotionCenterId.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/marjane/Entities/Implementations/PromotionCenterId.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/marjane/Entities/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/marjane/Entities/Manager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/marjane/Entities/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/marjane/Entities/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/marjane/Entities/ProductPromotion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/marjane/Entities/ProductPromotion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/marjane/Entities/PromotionCenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/marjane/Entities/PromotionCenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/marjane/Entities/Stock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/marjane/Entities/Stock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/marjane/Entities/SubCategory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/marjane/Entities/Department.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/marjane/Entities/SubCategoryPromotion.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/marjane/Repositories/ProductPromotionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/marjane/Repositories/ProductPromotionRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/marjane/Services/Implementations/ProductPromServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/marjane/Services/Implementations/ProductPromotionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/marjane/Services/Implementations/ProductPromotionServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/marjane/Services/Implementations/PromotionServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/marjane/Services/Interfaces/IProductPromotionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/marjane/Services/Interfaces/IProductPromotionService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/marjane/Services/Interfaces/IPromotionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/marjane/Services/Interfaces/IPromotionService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/marjane/Services/Interfaces/ProductPromotionService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/marjane/Api/Controllers/PromotionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/marjane/Api/Controllers/PromotionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/marjane/DTOs/Requests/RegisterRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/marjane/DTOs/Requests/RegisterRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/marjane/Repositories/ManagerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/marjane/Repositories/ManagerRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/marjane/Repositories/PromotionCenterRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/marjane/Repositories/PromotionCenterRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/marjane/Services/Implementations/ManagerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/marjane/Services/Implementations/ManagerServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/marjane/Services/Implementations/PromotionCenterServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/marjane/Services/Implementations/PromotionCenterServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/marjane/Services/Interfaces/IManagerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/marjane/Services/Interfaces/IManagerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/marjane/Services/Interfaces/IPromotionCenterService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/marjane/Services/Interfaces/IPromotionCenterService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,9 +108,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 10.1.14">
-    <configuration name="generated-requests | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" requestIdentifier="#1" runType="Run single request">
-      <method v="2" />
-    </configuration>
     <configuration name="generated-requests | #2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="2" requestIdentifier="#2" runType="Run single request">
       <method v="2" />
     </configuration>
@@ -160,6 +118,9 @@
       <method v="2" />
     </configuration>
     <configuration name="generated-requests | #6" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="6" requestIdentifier="#6" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="generated-requests | #7" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="7" requestIdentifier="#7" runType="Run single request">
       <method v="2" />
     </configuration>
     <configuration name="Tomcat 10.1.14" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.1.14" ALTERNATIVE_JRE_ENABLED="false">
@@ -249,20 +210,20 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="HTTP Request.generated-requests | #1" />
       <item itemvalue="HTTP Request.generated-requests | #2" />
       <item itemvalue="HTTP Request.generated-requests | #4" />
       <item itemvalue="HTTP Request.generated-requests | #5" />
       <item itemvalue="HTTP Request.generated-requests | #6" />
+      <item itemvalue="HTTP Request.generated-requests | #7" />
       <item itemvalue="Tomcat Server.Tomcat 10.1.14" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="HTTP Request.generated-requests | #7" />
         <item itemvalue="HTTP Request.generated-requests | #6" />
         <item itemvalue="HTTP Request.generated-requests | #5" />
         <item itemvalue="HTTP Request.generated-requests | #4" />
         <item itemvalue="HTTP Request.generated-requests | #2" />
-        <item itemvalue="HTTP Request.generated-requests | #1" />
       </list>
     </recent_temporary>
   </component>
@@ -276,11 +237,35 @@
       <updated>1698933684695</updated>
       <workItem from="1698933685777" duration="1126000" />
       <workItem from="1698937172300" duration="28621000" />
-      <workItem from="1699114493322" duration="100615000" />
+      <workItem from="1699114493322" duration="105138000" />
     </task>
+    <task id="LOCAL-00001" summary="Done : Promotions Implementations">
+      <option name="closed" value="true" />
+      <created>1699739199401</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1699739199403</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Done : Promotions Implementations" />
+    <option name="LAST_COMMIT_MESSAGE" value="Done : Promotions Implementations" />
   </component>
 </project>

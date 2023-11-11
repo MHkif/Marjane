@@ -1,3 +1,19 @@
+POST http://localhost:8080/manager/login
+Content-Type: application/json
+Content-Length: 62
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "email": "manager@gmail.com",
+  "password": "azertyuiop"
+}
+
+<> 2023-11-11T232706.404.html
+
+###
+
 GET http://localhost:8080/promotions
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)

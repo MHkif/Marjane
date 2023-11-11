@@ -105,6 +105,7 @@ public class PromotionController {
                 .collect(Collectors.toList());
     }
 
+
     @PostMapping(value = "/promotions/apply", produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
     // It indicates that the method does not return a view name but the actual data that should be sent in the response.
