@@ -1,12 +1,16 @@
 package com.marjane.Services.Interfaces;
 
+import com.marjane.DTOs.Responses.SuperAdminResponse;
+import com.marjane.Entities.SuperAdmin;
+
 import java.util.List;
+import java.util.Optional;
 
-public interface ISuperAdminService<T>  {
-    T findByCIN(String cin);
+public interface ISuperAdminService  {
+    Optional<SuperAdmin> findByCIN(String cin);
 
-    T findByEmailAndPassword(String email, String password);
+    Optional<SuperAdmin> login(String email, String password);
 
-    List<T> findAll();
 
+    SuperAdminResponse mapToDTO(SuperAdmin superAdmin);
 }

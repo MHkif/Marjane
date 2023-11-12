@@ -1,3 +1,55 @@
+POST http://localhost:8080/super-admin/login
+Content-Type: application/json
+Content-Length: 60
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "email": "achkif@gmail.com",
+  "password": "aqwzsxedc"
+}
+
+<> 2023-11-12T233427.200.json
+
+###
+
+POST http://localhost:8080/proxy-admin/login
+Content-Type: application/json
+Content-Length: 62
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "email": "achkif@gmail.com",
+  "password": "aqwzsxedc77"
+}
+
+<> 2023-11-12T230714.200.json
+
+###
+
+POST http://localhost:8080/proxy-admin/save
+Content-Type: application/json
+Content-Length: 167
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "cin": "GK103216",
+  "email": "proxyAdmin2@gmail.com",
+  "password": "azertyuiop",
+  "firstName": "Second",
+  "lastName": "ProxyAdmin",
+  "phone": "212237094780"
+}
+
+<> 2023-11-12T230157.201.json
+
+###
+
 POST http://localhost:8080/managers/register
 Content-Type: application/json
 Content-Length: 564

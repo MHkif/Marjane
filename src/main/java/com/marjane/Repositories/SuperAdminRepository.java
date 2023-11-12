@@ -1,5 +1,6 @@
 package com.marjane.Repositories;
 
+import com.marjane.Entities.Manager;
 import com.marjane.Entities.SuperAdmin;
 import org.springframework.data.domain.Example;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -9,5 +10,5 @@ import java.util.Optional;
 
 @Repository
 public interface SuperAdminRepository extends JpaRepository<SuperAdmin, String> {
-    Optional<SuperAdmin> findByEmail(String email);
+    Optional<SuperAdmin> findByEmailAndPassword(String email, String password);
 }

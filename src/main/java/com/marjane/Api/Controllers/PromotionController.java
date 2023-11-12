@@ -2,13 +2,11 @@ package com.marjane.Api.Controllers;
 
 import com.marjane.DTOs.ProductPromotionDTO;
 import com.marjane.DTOs.PromotionCenterDTO;
+import com.marjane.Entities.*;
 import com.marjane.Entities.Implementations.PromotionCenterId;
-import com.marjane.Entities.ProductPromotion;
-import com.marjane.Entities.PromotionCenter;
 import com.marjane.Enums.PromotionStatus;
-import com.marjane.Services.Implementations.ProductPromotionServiceImpl;
+import com.marjane.Services.Implementations.*;
 
-import com.marjane.Services.Implementations.PromotionCenterServiceImpl;
 import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -30,15 +28,28 @@ public class PromotionController {
 
     private ProductPromotionServiceImpl prodPromoService;
     private PromotionCenterServiceImpl promoCenterService;
+    private SuperAdminServiceImpl superAdminService;
+    private ProxyAdminServiceImpl proxyAdminService;
+    private ManagerServiceImpl managerService;
+    private Optional<SuperAdmin> superAdmin;
+    private Optional<ProxyAdmin> proxyAdmin;
+    private Optional<Manager> manager;
 
 
     @Autowired
     public PromotionController(
-            ProductPromotionServiceImpl service,
-            PromotionCenterServiceImpl promotionCenterService) {
+            ProductPromotionServiceImpl service, SuperAdminServiceImpl superAdminService, ManagerServiceImpl managerService,
+            PromotionCenterServiceImpl promotionCenterService, ProxyAdminServiceImpl proxyAdminService) {
 
         this.prodPromoService = service;
         this.promoCenterService = promotionCenterService;
+        this.superAdminService = superAdminService;
+        this.proxyAdminService = proxyAdminService;
+        this.managerService = managerService;
+
+        this.superAdmin= this.superAdminService.findByCIN("SQ456789");
+        this.proxyAdmin = this.proxyAdminService.findByCIN("SQ570980");
+        this.manager = this.managerService.findByCIN("DQ456865");
     }
 
 
@@ -47,6 +58,9 @@ public class PromotionController {
     @PostMapping(value = "/promotions/products/create", produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
     public ResponseEntity<ProductPromotionDTO> savePromotion(@RequestBody ProductPromotionDTO promotionDTO) {
+        if (this.proxyAdmin.isEmpty()){
+            return new ResponseEntity<>(HttpStatus.FORBIDDEN);
+        }
         Optional<ProductPromotion> promotion = prodPromoService.save(promotionDTO);
         return promotion.map(
                 productPromotion -> new ResponseEntity<>(
@@ -57,19 +71,20 @@ public class PromotionController {
     @PostMapping(value = "/promotions/products/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
     public ResponseEntity<ProductPromotionDTO> updatePromotion(@PathVariable("id") Long id) {
-        // #TODO : Need to fix
-        ProductPromotion promotion = null;
+        if (this.proxyAdmin.isEmpty()){
+            return new ResponseEntity<>(HttpStatus.FORBIDDEN);
+        }
+
+        ProductPromotion promotion;
         try {
             promotion = prodPromoService.findById(id).orElseThrow(() -> new Exception("Center not found with ID "+ id));
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
-        //  Optional<ProductPromotion> promotion = prodPromoService.update(promotionDTO);
         return prodPromoService.update(prodPromoService.mapToDTO(promotion)).map(
                         productPromotion -> new ResponseEntity<>(
                                 prodPromoService.mapToDTO(productPromotion), HttpStatus.OK)
-                )
-                .orElseGet(() -> new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR));
+                ).orElseGet(() -> new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR));
     }
 
     @RequestMapping(value = "/promotions/products/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
@@ -81,8 +96,6 @@ public class PromotionController {
 
     @RequestMapping(value = "/promotions/products", produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
-    // It indicates that the method does not return a view name but the actual data that should be sent in the response.
-    // @ResponseBody This annotation is used to indicate that the return value of the method should be serialized directly to the body of the HTTP response.
     public List<ProductPromotionDTO> getAllPromotions(){
         return prodPromoService.findAll()
                 .stream()
@@ -98,21 +111,26 @@ public class PromotionController {
     }
     @RequestMapping(value = "/promotions", produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
-    public List<PromotionCenterDTO> getAllPromotionsWithCenters(){
-        return promoCenterService.findAll()
+    public ResponseEntity<List<PromotionCenterDTO>> getAllPromotionsWithCenters(){
+        if(this.superAdmin.isPresent()){
+            return new ResponseEntity<>(HttpStatus.FORBIDDEN);
+        }
+
+        List<PromotionCenterDTO> promotions = promoCenterService.findAll()
                 .stream()
                 .map(promoCenterService::mapToDTO)
                 .collect(Collectors.toList());
+
+        return ResponseEntity.ok(promotions);
     }
 
 
     @PostMapping(value = "/promotions/apply", produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
-    // It indicates that the method does not return a view name but the actual data that should be sent in the response.
-    // @ResponseBody This annotation is used to indicate that the return value of the method should be serialized directly to the body of the HTTP response.
-    public List<PromotionCenterDTO> ApplyToPromotions(@RequestBody List<PromotionCenterDTO>  promotions){
-        // # TODO : Filter promotions , update only the applied promotions
-
+    public ResponseEntity<List<PromotionCenterDTO>> ApplyToPromotions(@RequestBody List<PromotionCenterDTO>  promotions){
+        if(this.manager.isEmpty()){
+            return new ResponseEntity<>(HttpStatus.FORBIDDEN);
+        }
         List<PromotionCenterDTO> allPromotions =  promoCenterService.findAll()
                 .stream()
                 .map(promoCenterService::mapToDTO)
@@ -127,17 +145,14 @@ public class PromotionController {
                                 )
                 )
                 .collect(Collectors.toList());
-        //return promotionsToUpdate;
-
-        return promotionsToUpdate.stream()
+        List<PromotionCenterDTO> promotionsList =  promotionsToUpdate.stream()
                 .peek(promotionCenterDTO -> {
                     promotionCenterDTO.setPerformedAt(LocalDateTime.now());
                     promoCenterService.save(promotionCenterDTO);
                 })
                 .collect(Collectors.toList());
 
-
-
+        return ResponseEntity.ok(promotionsList);
     }
 
 

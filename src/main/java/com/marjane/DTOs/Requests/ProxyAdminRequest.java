@@ -1,5 +1,6 @@
 package com.marjane.DTOs.Requests;
 
+import com.marjane.Entities.SuperAdmin;
 import lombok.Data;
 
 @Data
@@ -11,4 +12,5 @@ public class ProxyAdminRequest {
     private String firstName;
     private String lastName;
     private String phone;
+    private SuperAdmin superAdmin;
 }
