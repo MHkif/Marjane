@@ -8,5 +8,27 @@
       <jdbc-url>jdbc:postgresql://localhost:5432/supermarket</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
+    <data-source source="LOCAL" name="dataSource" uuid="9a331f4b-28c3-4c6f-8b90-689c40f46d23">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>spring
+
+C:/Users/Mhkif/Desktop/JavaVentures/Youcode projects/Marjane/src/main/webapp/WEB-INF/frontController-servlet.xml</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5432/supermarket</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+    <data-source source="LOCAL" name="marjane/Hibernate" uuid="555dcb76-42fc-44e9-a201-fdbb116b6506">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>Hibernate
+
+C:/Users/Mhkif/Desktop/JavaVentures/Youcode projects/Marjane/src/main/resources/META-INF/persistence.xml</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5432/supermarket</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
   </component>
 </project>

@@ -1,3 +1,355 @@
+GET http://localhost:8080/promotions
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-11-13T171039.200.json
+
+###
+
+POST http://localhost:8080/promotions/products/create
+Content-Type: application/json
+Content-Length: 1506
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "id": null ,
+  "admin": {
+    "cin" : "SQ570980",
+    "firstName" : "AbdelMalek",
+    "lastName": "Achkif",
+    "email" : "achkif@gmail.com",
+    "password" : "aqwzsxedc77",
+    "phone" : "+212771311145"
+  },
+  "product": {
+    "id": 2,
+    "admin": {
+      "cin" : "SQ570980",
+      "firstName" : "AbdelMalek",
+      "lastName": "Achkif",
+      "email" : "achkif@gmail.com",
+      "password" : "aqwzsxedc77",
+      "phone" : "+212771311145"
+    },
+    "name": "MacBook Pro 2023",
+    "category": {
+      "id": 1,
+      "name": "Laptops",
+      "department": {
+        "id": 1,
+        "name": "Electronics",
+        "center": {
+          "id": 2,
+          "name": "Center A",
+          "admin": null,
+          "city": {
+            "id": 1
+          }
+
+
+        },
+        "manager": {
+          "cin" : "DQ456865",
+          "firstName" : "Manager",
+          "lastName": "FirstOne",
+          "email" : "manager@gmail.com",
+          "password" : "azertyuiop",
+          "phone" : "+212771000000",
+          "admin": {
+            "cin" : "SQ570980",
+            "firstName" : "AbdelMalek",
+            "lastName": "Achkif",
+            "email" : "achkif@gmail.com",
+            "password" : "aqwzsxedc77",
+            "phone" : "+212771311145"
+          }
+        }
+      }
+    }
+  },
+  "startAt": null,
+  "percentage": 25,
+  "endAt": null,
+  "createdAt": null,
+  "centers": [
+    {
+      "id": 2,
+      "name": "Center A",
+      "admin": null,
+      "city": {
+        "id": 1
+      }
+    }
+  ]
+}
+
+<> 2023-11-13T170108.200.json
+
+###
+
+POST http://localhost:8080/promotions/products/create
+Content-Type: application/json
+Content-Length: 1506
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "id": null ,
+  "admin": {
+    "cin" : "SQ570980",
+    "firstName" : "AbdelMalek",
+    "lastName": "Achkif",
+    "email" : "achkif@gmail.com",
+    "password" : "aqwzsxedc77",
+    "phone" : "+212771311145"
+  },
+  "product": {
+    "id": 4,
+    "admin": {
+      "cin" : "SQ570980",
+      "firstName" : "AbdelMalek",
+      "lastName": "Achkif",
+      "email" : "achkif@gmail.com",
+      "password" : "aqwzsxedc77",
+      "phone" : "+212771311145"
+    },
+    "name": "MacBook Pro 2023",
+    "category": {
+      "id": 1,
+      "name": "Laptops",
+      "department": {
+        "id": 1,
+        "name": "Electronics",
+        "center": {
+          "id": 2,
+          "name": "Center A",
+          "admin": null,
+          "city": {
+            "id": 1
+          }
+
+
+        },
+        "manager": {
+          "cin" : "DQ456865",
+          "firstName" : "Manager",
+          "lastName": "FirstOne",
+          "email" : "manager@gmail.com",
+          "password" : "azertyuiop",
+          "phone" : "+212771000000",
+          "admin": {
+            "cin" : "SQ570980",
+            "firstName" : "AbdelMalek",
+            "lastName": "Achkif",
+            "email" : "achkif@gmail.com",
+            "password" : "aqwzsxedc77",
+            "phone" : "+212771311145"
+          }
+        }
+      }
+    }
+  },
+  "startAt": null,
+  "percentage": 25,
+  "endAt": null,
+  "createdAt": null,
+  "centers": [
+    {
+      "id": 2,
+      "name": "Center A",
+      "admin": null,
+      "city": {
+        "id": 1
+      }
+    }
+  ]
+}
+
+<> 2023-11-13T170003.500.html
+
+###
+
+POST http://localhost:8080/promotions/products/create
+Content-Type: application/json
+Content-Length: 1506
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "id": null ,
+  "admin": {
+    "cin" : "SQ570980",
+    "firstName" : "AbdelMalek",
+    "lastName": "Achkif",
+    "email" : "achkif@gmail.com",
+    "password" : "aqwzsxedc77",
+    "phone" : "+212771311145"
+  },
+  "product": {
+    "id": 4,
+    "admin": {
+      "cin" : "SQ570980",
+      "firstName" : "AbdelMalek",
+      "lastName": "Achkif",
+      "email" : "achkif@gmail.com",
+      "password" : "aqwzsxedc77",
+      "phone" : "+212771311145"
+    },
+    "name": "MacBook Pro 2023",
+    "category": {
+      "id": 1,
+      "name": "Laptops",
+      "department": {
+        "id": 1,
+        "name": "Electronics",
+        "center": {
+          "id": 2,
+          "name": "Center A",
+          "admin": null,
+          "city": {
+            "id": 1
+          }
+
+
+        },
+        "manager": {
+          "cin" : "DQ456865",
+          "firstName" : "Manager",
+          "lastName": "FirstOne",
+          "email" : "manager@gmail.com",
+          "password" : "azertyuiop",
+          "phone" : "+212771000000",
+          "admin": {
+            "cin" : "SQ570980",
+            "firstName" : "AbdelMalek",
+            "lastName": "Achkif",
+            "email" : "achkif@gmail.com",
+            "password" : "aqwzsxedc77",
+            "phone" : "+212771311145"
+          }
+        }
+      }
+    }
+  },
+  "startAt": null,
+  "percentage": 25,
+  "endAt": null,
+  "createdAt": null,
+  "centers": [
+    {
+      "id": 2,
+      "name": "Center A",
+      "admin": null,
+      "city": {
+        "id": 1
+      }
+    }
+  ]
+}
+
+<> 2023-11-13T165959.500.html
+
+###
+
+POST http://localhost:8080/promotions/products/create
+Content-Type: application/json
+Content-Length: 1506
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "id": null ,
+  "admin": {
+    "cin" : "SQ570980",
+    "firstName" : "AbdelMalek",
+    "lastName": "Achkif",
+    "email" : "achkif@gmail.com",
+    "password" : "aqwzsxedc77",
+    "phone" : "+212771311145"
+  },
+  "product": {
+    "id": 4,
+    "admin": {
+      "cin" : "SQ570980",
+      "firstName" : "AbdelMalek",
+      "lastName": "Achkif",
+      "email" : "achkif@gmail.com",
+      "password" : "aqwzsxedc77",
+      "phone" : "+212771311145"
+    },
+    "name": "MacBook Pro 2023",
+    "category": {
+      "id": 1,
+      "name": "Laptops",
+      "department": {
+        "id": 1,
+        "name": "Electronics",
+        "center": {
+          "id": 2,
+          "name": "Center A",
+          "admin": null,
+          "city": {
+            "id": 1
+          }
+
+
+        },
+        "manager": {
+          "cin" : "DQ456865",
+          "firstName" : "Manager",
+          "lastName": "FirstOne",
+          "email" : "manager@gmail.com",
+          "password" : "azertyuiop",
+          "phone" : "+212771000000",
+          "admin": {
+            "cin" : "SQ570980",
+            "firstName" : "AbdelMalek",
+            "lastName": "Achkif",
+            "email" : "achkif@gmail.com",
+            "password" : "aqwzsxedc77",
+            "phone" : "+212771311145"
+          }
+        }
+      }
+    }
+  },
+  "startAt": null,
+  "percentage": 25,
+  "endAt": null,
+  "createdAt": null,
+  "centers": [
+    {
+      "id": 2,
+      "name": "Center A",
+      "admin": null,
+      "city": {
+        "id": 1
+      }
+    }
+  ]
+}
+
+<> 2023-11-13T165027.500.html
+
+###
+
+POST http://localhost:8080/managers/promotions
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-11-13T153025.400.html
+
+###
+
 POST http://localhost:8080/super-admin/login
 Content-Type: application/json
 Content-Length: 60

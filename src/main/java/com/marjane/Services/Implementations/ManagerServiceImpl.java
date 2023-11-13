@@ -7,6 +7,7 @@ import com.marjane.Services.Interfaces.IManagerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalTime;
 import java.util.List;
 import java.util.Optional;
 
@@ -69,5 +70,12 @@ public class ManagerServiceImpl implements IManagerService {
         manager.setPhone(managerDTO.getPhone());
 
         return manager;
+    }
+
+    public  boolean isCurrentTimeInRange() {
+        final LocalTime START_TIME = LocalTime.of(8, 0); // 8 AM
+        final LocalTime END_TIME = LocalTime.of(12, 0); // 12 PM
+        LocalTime currentTime = LocalTime.now();
+        return !currentTime.isBefore(START_TIME) && currentTime.isBefore(END_TIME);
     }
 }

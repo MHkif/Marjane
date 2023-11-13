@@ -39,13 +39,8 @@ public class PromotionCenterServiceImpl implements IPromotionCenterService{
     }
 
     @Override
-    public List<PromotionCenter> findAllPromsByManager(String manager_cin) {
-        Optional<Manager> manager = managerService.findByCIN(manager_cin);
-            try {
-                return repository.findAllByManager(manager.orElseThrow(() -> new Exception("Manager not found")));
-            } catch (Exception e) {
-                throw new RuntimeException(e);
-            }
+    public List<PromotionCenter> findAllPromsByManager(Manager manager) {
+            return repository.findAllByManager(manager);
     }
 
     @Override

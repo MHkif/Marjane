@@ -72,14 +72,23 @@ public class ManagerController {
 
 
 
-    @PostMapping(value = "/managers/promotions", produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(value = "/managers/promotions", produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
-    public ResponseEntity<List<PromotionCenterDTO>> getAllPromotionsByManager(@RequestParam String cin) {
+    public ResponseEntity<List<PromotionCenterDTO>> getAllPromotionsByManager() {
+
         if (this.manager.isEmpty()) {
             return new ResponseEntity<>(HttpStatus.FORBIDDEN);
         }
-
-        List<PromotionCenterDTO> promotions = promoCenterService.findAllPromsByManager(cin)
+/*
+        if(!this.service.isCurrentTimeInRange()){
+            try {
+                throw  new Exception("En tant que manager, vous ne pouvez voir les promotions que de 8 à 12 heures .");
+            } catch (Exception e) {
+                throw new RuntimeException(e);
+            }
+        }
+ */
+        List<PromotionCenterDTO> promotions = promoCenterService.findAllPromsByManager(this.manager.get())
                 .stream()
                 .map(promoCenterService::mapToDTO)
                 .collect(Collectors.toList());

@@ -10,21 +10,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c99c93db-daa5-448e-b741-cb00dcb5c9bf" name="Changes" comment="Done : Promotions Implementations">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/marjane/Repositories/StockRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/marjane/Services/Implementations/StockServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/marjane/Services/Interfaces/IStockService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e026082e-d171-4a2d-93da-9530ba44d3fb.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/e026082e-d171-4a2d-93da-9530ba44d3fb.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e026082e-d171-4a2d-93da-9530ba44d3fb/storage_v2/_src_/database/supermarket.dzsnsA/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/e026082e-d171-4a2d-93da-9530ba44d3fb/storage_v2/_src_/database/supermarket.dzsnsA/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/marjane/Api/Controllers/ManagerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/marjane/Api/Controllers/ManagerController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/marjane/Api/Controllers/PromotionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/marjane/Api/Controllers/PromotionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/marjane/Api/Controllers/ProxyAdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/marjane/Api/Controllers/ProxyAdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/marjane/Api/Controllers/SuperAdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/marjane/Api/Controllers/SuperAdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/marjane/DTOs/Requests/ProxyAdminRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/marjane/DTOs/Requests/ProxyAdminRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/marjane/DTOs/Responses/ProxyAdminResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/marjane/DTOs/Responses/ProxyAdminResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/marjane/DTOs/Responses/SuperAdminResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/marjane/DTOs/Responses/SuperAdminResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/marjane/Repositories/ProxyAdminRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/marjane/Repositories/ProxyAdminRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/marjane/Repositories/SuperAdminRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/marjane/Repositories/SuperAdminRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/marjane/Services/Implementations/ProxyAdminServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/marjane/Services/Implementations/ProxyAdminServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/marjane/Services/Implementations/SuperAdminServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/marjane/Services/Implementations/SuperAdminServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/marjane/Services/Interfaces/IProxyAdminService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/marjane/Services/Interfaces/IProxyAdminService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/marjane/Services/Interfaces/ISuperAdminService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/marjane/Services/Interfaces/ISuperAdminService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/marjane/Repositories/ProductPromotionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/marjane/Repositories/ProductPromotionRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/marjane/Services/Implementations/ManagerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/marjane/Services/Implementations/ManagerServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/marjane/Services/Implementations/ProductPromotionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/marjane/Services/Implementations/ProductPromotionServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/marjane/Services/Implementations/PromotionCenterServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/marjane/Services/Implementations/PromotionCenterServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/marjane/Services/Interfaces/IPromotionCenterService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/marjane/Services/Interfaces/IPromotionCenterService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,32 +72,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "develop",
-    "last_opened_file_path": "C:/Users/Mhkif/Desktop/JavaVentures/Youcode projects/AirAfrika3",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;develop&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Mhkif/Desktop/JavaVentures/Youcode projects/Marjane&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Mhkif\Desktop\JavaVentures\Youcode projects\Marjane\src\main\java\com\example\marjane" />
@@ -112,22 +114,23 @@
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 10.1.14">
-    <configuration name="generated-requests | #10" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="10" requestIdentifier="#10" runType="Run single request">
+    <configuration name="generated-requests | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" requestIdentifier="#1" runType="Run single request">
       <method v="2" />
     </configuration>
     <configuration name="generated-requests | #11" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="11" requestIdentifier="#11" runType="Run single request">
       <method v="2" />
     </configuration>
-    <configuration name="generated-requests | #7" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="7" requestIdentifier="#7" runType="Run single request">
+    <configuration name="generated-requests | #2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="2" requestIdentifier="#2" runType="Run single request">
       <method v="2" />
     </configuration>
-    <configuration name="generated-requests | #8" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="8" requestIdentifier="#8" runType="Run single request">
+    <configuration name="generated-requests | #3" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="3" requestIdentifier="#3" runType="Run single request">
       <method v="2" />
     </configuration>
-    <configuration name="generated-requests | #9" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="9" requestIdentifier="#9" runType="Run single request">
+    <configuration name="generated-requests | #4" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="4" requestIdentifier="#4" runType="Run single request">
       <method v="2" />
     </configuration>
-    <configuration name="Tomcat 10.1.14" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.1.14" ALTERNATIVE_JRE_ENABLED="false">
+    <configuration name="Tomcat 10.1.14" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.1.14" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="Marjane:war exploded">
           <settings>
@@ -136,7 +139,7 @@
         </artifact>
       </deployment>
       <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="b9cb24f0-2de8-47a1-a587-06e26a2bde8e" />
+        <option name="BASE_DIRECTORY_NAME" value="6805b405-4ce0-47c8-8bf0-e7f147452cdd" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -144,7 +147,7 @@
       <predefined_log_file id="Tomcat Host Manager" />
       <predefined_log_file id="Tomcat Localhost Access" />
       <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="60809" />
+        <option name="DEBUG_PORT" value="52493" />
       </RunnerSettings>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
         <option name="USE_ENV_VARIABLES" value="true" />
@@ -214,20 +217,20 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="HTTP Request.generated-requests | #10" />
+      <item itemvalue="HTTP Request.generated-requests | #2" />
+      <item itemvalue="HTTP Request.generated-requests | #3" />
+      <item itemvalue="HTTP Request.generated-requests | #4" />
+      <item itemvalue="HTTP Request.generated-requests | #1" />
       <item itemvalue="HTTP Request.generated-requests | #11" />
-      <item itemvalue="HTTP Request.generated-requests | #7" />
-      <item itemvalue="HTTP Request.generated-requests | #8" />
-      <item itemvalue="HTTP Request.generated-requests | #9" />
       <item itemvalue="Tomcat Server.Tomcat 10.1.14" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="HTTP Request.generated-requests | #4" />
+        <item itemvalue="HTTP Request.generated-requests | #3" />
+        <item itemvalue="HTTP Request.generated-requests | #2" />
+        <item itemvalue="HTTP Request.generated-requests | #1" />
         <item itemvalue="HTTP Request.generated-requests | #11" />
-        <item itemvalue="HTTP Request.generated-requests | #10" />
-        <item itemvalue="HTTP Request.generated-requests | #9" />
-        <item itemvalue="HTTP Request.generated-requests | #8" />
-        <item itemvalue="HTTP Request.generated-requests | #7" />
       </list>
     </recent_temporary>
   </component>
@@ -241,7 +244,10 @@
       <updated>1698933684695</updated>
       <workItem from="1698933685777" duration="1126000" />
       <workItem from="1698937172300" duration="28621000" />
-      <workItem from="1699114493322" duration="114436000" />
+      <workItem from="1699114493322" duration="117356000" />
+      <workItem from="1699869875386" duration="825000" />
+      <workItem from="1699873492157" duration="4993000" />
+      <workItem from="1699887380615" duration="3234000" />
     </task>
     <task id="LOCAL-00001" summary="Done : Promotions Implementations">
       <option name="closed" value="true" />
@@ -256,6 +262,16 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="dependencySupport" implementationName="java:org.springframework:spring-core" />
+    <option featureType="dependencySupport" implementationName="executable:docker" />
+    <option featureType="dependencySupport" implementationName="java:jakarta.persistence:jakarta.persistence-api" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework.data:spring-data-commons" />
+    <option featureType="dependencySupport" implementationName="executable:kubectl" />
+    <option featureType="dependencySupport" implementationName="maven-packaging:war" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework:spring-webmvc" />
+    <option featureType="dependencySupport" implementationName="java:org.projectlombok:lombok" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">

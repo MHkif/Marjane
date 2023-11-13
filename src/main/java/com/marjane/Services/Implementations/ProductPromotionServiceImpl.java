@@ -12,6 +12,8 @@ import com.marjane.Repositories.ProductPromotionRepository;
 import com.marjane.Services.Interfaces.IProductPromotionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.crossstore.ChangeSetPersister;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -24,7 +26,7 @@ import java.util.stream.Collectors;
 public class ProductPromotionServiceImpl implements IProductPromotionService {
 
     private ProductPromotionRepository repository;
-    private CenterRepository centerRepository;
+    private StockServiceImpl stockService;
     private PromotionCenterServiceImpl promotionCenterService;
     private ManagerServiceImpl managerService;
 
@@ -33,11 +35,11 @@ public class ProductPromotionServiceImpl implements IProductPromotionService {
     public ProductPromotionServiceImpl(ProductPromotionRepository repository,
                                        PromotionCenterServiceImpl promotionCenterService,
                                        ManagerServiceImpl managerService,
-                                       CenterRepository centerRepository) {
+                                       StockServiceImpl stockService) {
         this.repository = repository;
         this.promotionCenterService = promotionCenterService;
         this.managerService = managerService;
-        this.centerRepository = centerRepository;
+        this.stockService = stockService;
     }
 
 
@@ -55,34 +57,59 @@ public class ProductPromotionServiceImpl implements IProductPromotionService {
 
     @Override
     public Optional<ProductPromotion> save(ProductPromotionDTO promotion) {
-        ProductPromotion productPromotion = mapToEntity(promotion);
-        Optional<Manager> manager = managerService.findByCIN(productPromotion.getProduct().getCategory().getDepartment().getManager().getCin());
-
-        if(manager.isPresent()){
-            repository.save(productPromotion);
-
-            List<PromotionCenterDTO> promotionCenterDTOs = promotion.getCenters().stream()
-                    .map(center -> {
-                        try {
-                            return PromotionCenterDTO.builder()
-                                    .id(new PromotionCenterId(productPromotion.getId(), center.getId()))
-                                    .productPromotion(productPromotion)
-                                    //.center(centerRepository.findById(2L).orElseThrow(() -> new Exception("Center not found with ID 2")))
-                                    .center(Optional.of(center).orElseThrow(() -> new Exception("Center not found with ID "+ center.getId())))
-                                    .manager(manager.orElseThrow(() -> new Exception("Manager not found")))
-                                    .performedAt(null)
-                                    .build();
-                        } catch (Exception e) {
-                            throw new RuntimeException(e);
-                        }
-                    })
-                    .collect(Collectors.toList());
-
-            promotionCenterDTOs.forEach(promotionCenterService::save);
-
-            return Optional.of(productPromotion);
+        int Qnt = stockService.findByProduct(promotion.getProduct()).getQuantity();
+        if(Qnt <= 0){
+            try {
+                throw  new Exception("Stock Quantity : 0 , This product is not available , Check the Stock");
+            } catch (Exception e) {
+                throw new RuntimeException(e);
+            }
+        }
+        // Testing on Computers Category
+        else if(promotion.getProduct().getCategory().getName().equals("Computers & Accessories") && promotion.getPercentage().intValue() > 20){
+            try {
+                throw  new Exception("Promotion of Computers & Accessories products must not exceed 20%.");
+            } catch (Exception e) {
+                throw new RuntimeException(e);
+            }
+        }
+        else if(promotion.getPercentage().intValue() > 50){
+            try {
+                throw  new Exception("Each promotion must not exceed 50% of the product price");
+            } catch (Exception e) {
+                throw new RuntimeException(e);
+            }
         }else {
-            return Optional.empty();
+
+            ProductPromotion productPromotion = mapToEntity(promotion);
+            Optional<Manager> manager = managerService.findByCIN(productPromotion.getProduct().getCategory().getDepartment().getManager().getCin());
+
+            if (manager.isPresent()) {
+                repository.save(productPromotion);
+
+                List<PromotionCenterDTO> promotionCenterDTOs = promotion.getCenters().stream()
+                        .map(center -> {
+                            try {
+                                return PromotionCenterDTO.builder()
+                                        .id(new PromotionCenterId(productPromotion.getId(), center.getId()))
+                                        .productPromotion(productPromotion)
+                                        //.center(centerRepository.findById(2L).orElseThrow(() -> new Exception("Center not found with ID 2")))
+                                        .center(Optional.of(center).orElseThrow(() -> new Exception("Center not found with ID " + center.getId())))
+                                        .manager(manager.orElseThrow(() -> new Exception("Manager not found")))
+                                        .performedAt(null)
+                                        .build();
+                            } catch (Exception e) {
+                                throw new RuntimeException(e);
+                            }
+                        })
+                        .collect(Collectors.toList());
+
+                promotionCenterDTOs.forEach(promotionCenterService::save);
+
+                return Optional.of(productPromotion);
+            } else {
+                return Optional.empty();
+            }
         }
 
     }
@@ -103,7 +130,7 @@ public class ProductPromotionServiceImpl implements IProductPromotionService {
                             return PromotionCenterDTO.builder()
                                     .id(new PromotionCenterId(productPromotion.getId(), 2L))
                                     .productPromotion(productPromotion)
-                                    .center(centerRepository.findById(2L).orElseThrow(() -> new Exception("Center not found with ID 2")))
+                                    .center(Optional.of(center).orElseThrow(() -> new Exception("Center not found with ID " + center.getId())))
                                     .manager(manager.orElseThrow(() -> new Exception("Manager not found")))
                                     .performedAt(null)
                                     .build();

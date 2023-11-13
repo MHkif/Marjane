@@ -61,11 +61,13 @@ public class PromotionController {
         if (this.proxyAdmin.isEmpty()){
             return new ResponseEntity<>(HttpStatus.FORBIDDEN);
         }
+
         Optional<ProductPromotion> promotion = prodPromoService.save(promotionDTO);
         return promotion.map(
-                productPromotion -> new ResponseEntity<>(
-                        prodPromoService.mapToDTO(productPromotion), HttpStatus.OK))
-                .orElseGet(() -> new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR));
+                           productPromotion -> new ResponseEntity<>(
+                                   prodPromoService.mapToDTO(productPromotion), HttpStatus.OK))
+                   .orElseGet(() -> new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR));
+
     }
 
     @PostMapping(value = "/promotions/products/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
@@ -87,7 +89,7 @@ public class PromotionController {
                 ).orElseGet(() -> new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR));
     }
 
-    @RequestMapping(value = "/promotions/products/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(value = "/promotions/products/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
     public ResponseEntity<ProductPromotionDTO> getPromotion(@PathVariable("id") Long id){
         Optional<ProductPromotion> promotion = prodPromoService.findById(id);
@@ -109,10 +111,10 @@ public class PromotionController {
         Optional<PromotionCenter> promotionCenter = promoCenterService.findById(new PromotionCenterId(centerId, promoId));
         return promotionCenter.map(promoCenter -> new ResponseEntity<>(promoCenterService.mapToDTO(promoCenter), HttpStatus.OK)).orElseGet(() -> new ResponseEntity<>(HttpStatus.NOT_FOUND));
     }
-    @RequestMapping(value = "/promotions", produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(value = "/promotions", produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
     public ResponseEntity<List<PromotionCenterDTO>> getAllPromotionsWithCenters(){
-        if(this.superAdmin.isPresent()){
+        if(this.superAdmin.isEmpty()){
             return new ResponseEntity<>(HttpStatus.FORBIDDEN);
         }
 
@@ -121,7 +123,7 @@ public class PromotionController {
                 .map(promoCenterService::mapToDTO)
                 .collect(Collectors.toList());
 
-        return ResponseEntity.ok(promotions);
+        return new ResponseEntity<>(promotions, HttpStatus.OK);
     }
 
 
