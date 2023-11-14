@@ -18,6 +18,7 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.swing.text.html.Option;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -27,13 +28,8 @@ import java.util.stream.Collectors;
 @RestController
 public class ManagerController {
 
-    // # TODO : Testing
-    private Optional<SuperAdmin> superAdmin;
-    private Optional<ProxyAdmin> proxyAdmin;
-    private Optional<Manager> manager;
     private PromotionCenterServiceImpl promoCenterService;
     private ManagerServiceImpl service;
-    private SuperAdminServiceImpl superAdminService;
     private ProxyAdminServiceImpl proxyAdminService;
 
 
@@ -44,12 +40,7 @@ public class ManagerController {
                              ProxyAdminServiceImpl proxyAdminService) {
         this.promoCenterService = promoCenterService;
         this.service = service;
-        this.superAdminService = superAdminService;
         this.proxyAdminService = proxyAdminService;
-
-        this.superAdmin= this.superAdminService.findByCIN("SQ456789");
-        this.proxyAdmin = this.proxyAdminService.findByCIN("SQ570980");
-        this.manager = this.service.findByCIN("DQ456865");
     }
 
     @PostMapping(value = "/managers/login", produces = MediaType.APPLICATION_JSON_VALUE)
@@ -62,7 +53,8 @@ public class ManagerController {
     @PostMapping(value = "/managers/save", produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
     public ResponseEntity<ManagerDTO> save(@RequestBody ManagerDTO managerDTO){
-        if(this.proxyAdmin.isEmpty()){
+        Optional<ProxyAdmin> proxyAdmin = this.proxyAdminService.findByCIN("SQ570980");
+        if(proxyAdmin.isEmpty()){
             return new ResponseEntity<>(HttpStatus.FORBIDDEN);
         }
         Optional<Manager> manager = service.save(managerDTO);
@@ -75,11 +67,11 @@ public class ManagerController {
     @GetMapping(value = "/managers/promotions", produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
     public ResponseEntity<List<PromotionCenterDTO>> getAllPromotionsByManager() {
-
-        if (this.manager.isEmpty()) {
+        Optional<Manager> managerEntity =  this.service.findByCIN("DQ456865");
+        if (managerEntity.isEmpty()) {
             return new ResponseEntity<>(HttpStatus.FORBIDDEN);
         }
-/*
+
         if(!this.service.isCurrentTimeInRange()){
             try {
                 throw  new Exception("En tant que manager, vous ne pouvez voir les promotions que de 8 à 12 heures .");
@@ -87,8 +79,8 @@ public class ManagerController {
                 throw new RuntimeException(e);
             }
         }
- */
-        List<PromotionCenterDTO> promotions = promoCenterService.findAllPromsByManager(this.manager.get())
+
+        List<PromotionCenterDTO> promotions = promoCenterService.findAllPromsByManager(managerEntity.get())
                 .stream()
                 .map(promoCenterService::mapToDTO)
                 .collect(Collectors.toList());

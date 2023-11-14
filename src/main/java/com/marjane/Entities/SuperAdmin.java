@@ -5,7 +5,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 
-@EqualsAndHashCode(callSuper = true)
+//@EqualsAndHashCode(callSuper = true)
 @NoArgsConstructor
 @AllArgsConstructor
 @Data

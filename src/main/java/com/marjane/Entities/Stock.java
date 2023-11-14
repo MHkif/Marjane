@@ -21,8 +21,11 @@ public class Stock {
     private ProxyAdmin admin;
 
     @OneToOne
-    @JoinColumn(name = "product_id", referencedColumnName = "id")
+    @JoinColumn(name = "product_id")
     private Product product;
+    @OneToOne
+    @JoinColumn(name = "center_id")
+    private Center center;
 
     @Column(name = "quantity")
     private int quantity;

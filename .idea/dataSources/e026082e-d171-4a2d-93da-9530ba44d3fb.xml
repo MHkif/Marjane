@@ -3,15 +3,7 @@
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.49">
     <root id="1">
       <DateStyle>dmy</DateStyle>
-      <Grants>1||-9223372036854775808|c|G
-1||10|c|G
-1||10|C|G
-1||10|T|G
-4||-9223372036854775808|c|G
-4||10|c|G
-4||10|C|G
-4||10|T|G</Grants>
-      <IntrospectionStateNumber>4008</IntrospectionStateNumber>
+      <IntrospectionStateNumber>4033</IntrospectionStateNumber>
       <ServerVersion>16.0</ServerVersion>
       <StartupTime>1699867571</StartupTime>
       <TimeZones>true ACDT
@@ -822,7 +814,7 @@ false Zulu
 14643||10|C|G
 14643||-9223372036854775808|U|G
 14643||10|U|G</Grants>
-      <IntrospectionStateNumber>4008</IntrospectionStateNumber>
+      <IntrospectionStateNumber>4033</IntrospectionStateNumber>
       <ObjectId>17356</ObjectId>
       <OwnerName>postgres</OwnerName>
     </database>
@@ -4241,9 +4233,9 @@ false Zulu
     <schema id="266" parent="5" name="public">
       <Comment>standard public schema</Comment>
       <Current>1</Current>
-      <IntrospectionStateNumber>4008</IntrospectionStateNumber>
-      <IntrospectionTimestamp>2023-11-13.12:06:51.293</IntrospectionTimestamp>
-      <LocalIntrospectionTimestamp>2023-11-13.11:06:52</LocalIntrospectionTimestamp>
+      <IntrospectionStateNumber>4033</IntrospectionStateNumber>
+      <IntrospectionTimestamp>2023-11-14.11:55:51.529</IntrospectionTimestamp>
+      <LocalIntrospectionTimestamp>2023-11-14.10:55:53</LocalIntrospectionTimestamp>
       <ObjectId>2200</ObjectId>
       <StateNumber>524</StateNumber>
       <OwnerName>pg_database_owner</OwnerName>
@@ -4291,7 +4283,7 @@ false Zulu
     <sequence id="272" parent="266" name="productpromotions_id_seq">
       <DasType>bigint|0s</DasType>
       <ObjectId>17406</ObjectId>
-      <SequenceIdentity>1(34)</SequenceIdentity>
+      <SequenceIdentity>1(37)</SequenceIdentity>
       <StartValue>1</StartValue>
       <StateNumber>3751</StateNumber>
       <OwnerName>postgres</OwnerName>
@@ -4307,7 +4299,7 @@ false Zulu
     <sequence id="274" parent="266" name="stock_id_seq">
       <DasType>bigint|0s</DasType>
       <ObjectId>17429</ObjectId>
-      <SequenceIdentity>1(1)</SequenceIdentity>
+      <SequenceIdentity>1(5)</SequenceIdentity>
       <StartValue>1</StartValue>
       <StateNumber>3754</StateNumber>
       <OwnerName>postgres</OwnerName>
@@ -4362,7 +4354,7 @@ false Zulu
     </table>
     <table id="283" parent="266" name="products">
       <ObjectId>17414</ObjectId>
-      <StateNumber>3762</StateNumber>
+      <StateNumber>4023</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
@@ -4380,7 +4372,7 @@ false Zulu
     </table>
     <table id="286" parent="266" name="stock">
       <ObjectId>17430</ObjectId>
-      <StateNumber>3914</StateNumber>
+      <StateNumber>4029</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
@@ -4887,33 +4879,32 @@ false Zulu
       <StateNumber>3752</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="355" parent="283" name="admin_id">
-      <DasType>varchar(255)|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>3</Position>
-      <StateNumber>3752</StateNumber>
-      <TypeId>1043</TypeId>
-    </column>
-    <column id="356" parent="283" name="cat_id">
+    <column id="355" parent="283" name="cat_id">
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StateNumber>3950</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <foreign-key id="357" parent="283" name="fk76439aeln4u13qxk35ea0jscs">
-      <ColNames>admin_id</ColNames>
-      <ObjectId>17482</ObjectId>
-      <StateNumber>3763</StateNumber>
-      <RefKeyColPositions>1</RefKeyColPositions>
-      <RefTableId>17422</RefTableId>
-    </foreign-key>
-    <foreign-key id="358" parent="283" name="fkst3irn0akhwfaujxx7my2dw7j">
+    <column id="356" parent="283" name="product">
+      <DasType>bigint|0s</DasType>
+      <Position>6</Position>
+      <StateNumber>4023</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <foreign-key id="357" parent="283" name="fkst3irn0akhwfaujxx7my2dw7j">
       <ColNames>cat_id</ColNames>
       <ObjectId>17687</ObjectId>
       <StateNumber>3952</StateNumber>
       <RefKeyColPositions>1</RefKeyColPositions>
       <RefTableId>17640</RefTableId>
+    </foreign-key>
+    <foreign-key id="358" parent="283" name="fkni8w2l8b3bjq6oty0hn0vc82n">
+      <ColNames>product</ColNames>
+      <ObjectId>17777</ObjectId>
+      <StateNumber>4024</StateNumber>
+      <RefKeyColPositions>1</RefKeyColPositions>
+      <RefTableId>17430</RefTableId>
     </foreign-key>
     <index id="359" parent="283" name="products_pkey">
       <ColNames>id</ColNames>
@@ -5122,21 +5113,34 @@ promotion_id</ColNames>
       <StateNumber>3914</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <foreign-key id="388" parent="286" name="fkeuiihog7wq4cu7nvqu7jx57d2">
+    <column id="388" parent="286" name="center_id">
+      <DasType>bigint|0s</DasType>
+      <Position>8</Position>
+      <StateNumber>4029</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <foreign-key id="389" parent="286" name="fkeuiihog7wq4cu7nvqu7jx57d2">
       <ColNames>product_id</ColNames>
       <ObjectId>17497</ObjectId>
       <StateNumber>3766</StateNumber>
       <RefKeyColPositions>1</RefKeyColPositions>
       <RefTableId>17414</RefTableId>
     </foreign-key>
-    <foreign-key id="389" parent="286" name="fk78fr6h47gkatduxboegt0fmpg">
+    <foreign-key id="390" parent="286" name="fk78fr6h47gkatduxboegt0fmpg">
       <ColNames>admin_id</ColNames>
       <ObjectId>17672</ObjectId>
       <StateNumber>3918</StateNumber>
       <RefKeyColPositions>1</RefKeyColPositions>
       <RefTableId>17422</RefTableId>
     </foreign-key>
-    <index id="390" parent="286" name="stock_pkey">
+    <foreign-key id="391" parent="286" name="fkjldaq3lw3cfi07h9gxycoud3v">
+      <ColNames>center_id</ColNames>
+      <ObjectId>17782</ObjectId>
+      <StateNumber>4030</StateNumber>
+      <RefKeyColPositions>1</RefKeyColPositions>
+      <RefTableId>17379</RefTableId>
+    </foreign-key>
+    <index id="392" parent="286" name="stock_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>17434</ObjectId>
@@ -5145,56 +5149,56 @@ promotion_id</ColNames>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="391" parent="286" name="stock_pkey">
+    <key id="393" parent="286" name="stock_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>17435</ObjectId>
       <Primary>1</Primary>
       <StateNumber>3754</StateNumber>
       <UnderlyingIndexId>17434</UnderlyingIndexId>
     </key>
-    <column id="392" parent="287" name="cin">
+    <column id="394" parent="287" name="cin">
       <DasType>varchar(255)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>3743</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="393" parent="287" name="email">
+    <column id="395" parent="287" name="email">
       <DasType>varchar(255)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>3803</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="394" parent="287" name="firstname">
+    <column id="396" parent="287" name="firstname">
       <DasType>varchar(255)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StateNumber>3804</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="395" parent="287" name="lastname">
+    <column id="397" parent="287" name="lastname">
       <DasType>varchar(255)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StateNumber>3805</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="396" parent="287" name="password">
+    <column id="398" parent="287" name="password">
       <DasType>varchar(255)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>5</Position>
       <StateNumber>3806</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="397" parent="287" name="phone">
+    <column id="399" parent="287" name="phone">
       <DasType>varchar(255)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>6</Position>
       <StateNumber>3807</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="398" parent="287" name="superadmin_pkey">
+    <index id="400" parent="287" name="superadmin_pkey">
       <ColNames>cin</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>17360</ObjectId>
@@ -5206,7 +5210,7 @@ promotion_id</ColNames>
       <CollationIds>100</CollationIds>
       <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
-    <key id="399" parent="287" name="superadmin_pkey">
+    <key id="401" parent="287" name="superadmin_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>17361</ObjectId>
       <Primary>1</Primary>

@@ -20,6 +20,5 @@ public class Product {
     @Column(name = "name", length = 255, nullable = false)
     private String name;
 
-    @OneToOne(mappedBy = "product") // Define the OneToOne relationship
-    private Stock stock;
+
 }

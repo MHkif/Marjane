@@ -8,17 +8,17 @@ import lombok.Data;
 @MappedSuperclass
 public class Person {
     @Column(name = "firstName", length = 255, nullable = false)
-    private String firstName;
+    protected String firstName;
 
     @Column(name = "lastName", length = 255, nullable = false)
-    private String lastName;
+    protected String lastName;
 
     @Column(name = "email", length = 255, nullable = false)
-    private String email;
+    protected String email;
 
     @Column(name = "password", length = 255, nullable = false)
-    private String password;
+    protected String password;
 
     @Column(name = "phone", length = 255, nullable = false)
-    private String phone;
+    protected String phone;
 }

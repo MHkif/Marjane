@@ -43,8 +43,6 @@ public class ProductPromotionServiceImpl implements IProductPromotionService {
     }
 
 
-
-
     @Override
     public Optional<ProductPromotion> findById(Long id) {
         return repository.findById(id);
@@ -158,7 +156,7 @@ public class ProductPromotionServiceImpl implements IProductPromotionService {
 
     public ProductPromotionDTO mapToDTO(ProductPromotion promotion){
         if (promotion == null) {
-            return null; // or throw an exception, depending on your requirements
+            return null;
         }
         return ProductPromotionDTO.builder()
                 .id(promotion.getId())
@@ -173,7 +171,7 @@ public class ProductPromotionServiceImpl implements IProductPromotionService {
 
     public ProductPromotion mapToEntity(ProductPromotionDTO promotion){
         if (promotion == null) {
-            return null; // or throw an exception, depending on your requirements
+            return null;
         }
         ProductPromotion productPromotion =  new ProductPromotion();
         productPromotion.setId(promotion.getId());

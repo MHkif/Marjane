@@ -31,9 +31,7 @@ public class PromotionController {
     private SuperAdminServiceImpl superAdminService;
     private ProxyAdminServiceImpl proxyAdminService;
     private ManagerServiceImpl managerService;
-    private Optional<SuperAdmin> superAdmin;
-    private Optional<ProxyAdmin> proxyAdmin;
-    private Optional<Manager> manager;
+
 
 
     @Autowired
@@ -46,10 +44,6 @@ public class PromotionController {
         this.superAdminService = superAdminService;
         this.proxyAdminService = proxyAdminService;
         this.managerService = managerService;
-
-        this.superAdmin= this.superAdminService.findByCIN("SQ456789");
-        this.proxyAdmin = this.proxyAdminService.findByCIN("SQ570980");
-        this.manager = this.managerService.findByCIN("DQ456865");
     }
 
 
@@ -58,7 +52,8 @@ public class PromotionController {
     @PostMapping(value = "/promotions/products/create", produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
     public ResponseEntity<ProductPromotionDTO> savePromotion(@RequestBody ProductPromotionDTO promotionDTO) {
-        if (this.proxyAdmin.isEmpty()){
+        Optional<ProxyAdmin> proxyAdmin = this.proxyAdminService.findByCIN("SQ570980");
+        if (proxyAdmin.isEmpty()){
             return new ResponseEntity<>(HttpStatus.FORBIDDEN);
         }
 
@@ -73,7 +68,8 @@ public class PromotionController {
     @PostMapping(value = "/promotions/products/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
     public ResponseEntity<ProductPromotionDTO> updatePromotion(@PathVariable("id") Long id) {
-        if (this.proxyAdmin.isEmpty()){
+        Optional<ProxyAdmin> proxyAdmin = this.proxyAdminService.findByCIN("SQ570980");
+        if (proxyAdmin.isEmpty()){
             return new ResponseEntity<>(HttpStatus.FORBIDDEN);
         }
 
@@ -96,7 +92,7 @@ public class PromotionController {
         return promotion.map(productPromotion -> new ResponseEntity<>(prodPromoService.mapToDTO(productPromotion), HttpStatus.OK)).orElseGet(() -> new ResponseEntity<>(HttpStatus.NOT_FOUND));
     }
 
-    @RequestMapping(value = "/promotions/products", produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(value = "/promotions/products", produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
     public List<ProductPromotionDTO> getAllPromotions(){
         return prodPromoService.findAll()
@@ -105,7 +101,7 @@ public class PromotionController {
                 .collect(Collectors.toList());
     }
 
-    @RequestMapping(value = "/promotions/{centerId}/{promoId}", produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(value = "/promotions/{centerId}/{promoId}", produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
     public ResponseEntity<PromotionCenterDTO> getPromotionCenter(@PathVariable("centerId") Long centerId, @PathVariable("promoId") Long promoId){
         Optional<PromotionCenter> promotionCenter = promoCenterService.findById(new PromotionCenterId(centerId, promoId));
@@ -114,7 +110,9 @@ public class PromotionController {
     @GetMapping(value = "/promotions", produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
     public ResponseEntity<List<PromotionCenterDTO>> getAllPromotionsWithCenters(){
-        if(this.superAdmin.isEmpty()){
+
+        Optional<SuperAdmin> superAdmin= this.superAdminService.findByCIN("SQ456789");
+        if(superAdmin.isEmpty()){
             return new ResponseEntity<>(HttpStatus.FORBIDDEN);
         }
 
@@ -130,9 +128,12 @@ public class PromotionController {
     @PostMapping(value = "/promotions/apply", produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
     public ResponseEntity<List<PromotionCenterDTO>> ApplyToPromotions(@RequestBody List<PromotionCenterDTO>  promotions){
-        if(this.manager.isEmpty()){
+        Optional<Manager> manager = this.managerService.findByCIN("DQ456865");
+        if(manager.isEmpty()){
             return new ResponseEntity<>(HttpStatus.FORBIDDEN);
         }
+
+
         List<PromotionCenterDTO> allPromotions =  promoCenterService.findAll()
                 .stream()
                 .map(promoCenterService::mapToDTO)

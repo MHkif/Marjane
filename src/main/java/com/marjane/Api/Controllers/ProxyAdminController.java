@@ -25,14 +25,13 @@ import java.util.Optional;
 public class ProxyAdminController {
 
     private ProxyAdminServiceImpl proxyAdminService;
-    private Optional<SuperAdmin> superAdmin;
     private SuperAdminServiceImpl superAdminService;
 
     @Autowired
     public ProxyAdminController(ProxyAdminServiceImpl proxyAdminService, SuperAdminServiceImpl superAdminService) {
         this.proxyAdminService = proxyAdminService;
         this.superAdminService = superAdminService;
-        this.superAdmin= this.superAdminService.findByCIN("SQ456789");
+
     }
 
     @PostMapping(value = "/proxy-admin/login", produces = MediaType.APPLICATION_JSON_VALUE)
@@ -46,8 +45,9 @@ public class ProxyAdminController {
     @PostMapping(value = "/proxy-admin/save", produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
     public ResponseEntity<ProxyAdminResponse> save(@RequestBody ProxyAdminRequest request) {
-        if(this.superAdmin.isPresent()){
-            request.setSuperAdmin(this.superAdmin.get());
+        Optional<SuperAdmin> superAdmin= this.superAdminService.findByCIN("SQ456789");
+        if(superAdmin.isPresent()){
+            request.setSuperAdmin(superAdmin.get());
             Optional<ProxyAdmin> proxyAdmin = this.proxyAdminService.save(request);
             return proxyAdmin.map(proxyAdminEnt -> new ResponseEntity<>(this.proxyAdminService.mapToDTO(proxyAdminEnt), HttpStatus.CREATED)).orElseGet(() -> new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR));
         }else{
